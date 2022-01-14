@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1"
+  },
+  "dependencies": {
+    "bower": "^1.8.13",
+    "gulp-cli": "^2.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.0.0"
+  },
+  "scripts": {
+    "preci": "rm -fr node_modules",
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile"
+  }
+}
