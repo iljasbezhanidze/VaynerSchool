@@ -65,6 +65,10 @@ body {
 .b-main__container {
     flex-grow: 1;
     max-width: var(--container-width);
+
+    &_sm {
+        max-width: 1040px;
+    }
 }
 
 .b-main__section_sticky-left {
@@ -114,9 +118,17 @@ body {
     height: 100%;
 }
 
-.b-page-footer {}
+.b-page-footer {
+    display: flex;
+    justify-content: center;
+    padding: 160px;
+    padding-bottom: 66px;
+}
 
-.b-page-footer__container {}
+.b-page-footer__container {
+    max-width: 1600px;
+    flex-grow: 1;
+}
 
 .b-title {
     font-weight: 800;

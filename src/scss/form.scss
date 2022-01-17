@@ -1,0 +1,125 @@
+.b-callback {}
+
+.b-callback__title {
+    text-align: initial;
+    margin-bottom: 80px;
+}
+
+.b-title {}
+
+.b-title_lg {}
+
+.b-form {}
+
+.b-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    margin-bottom: 40px;
+}
+
+.b-form__input_name {
+    flex: 1 1 100%;
+    max-width: 500px;
+}
+
+.b-form__input_mail {
+    flex: 1 1 100%;
+    max-width: 500px;
+}
+
+.b-form__inner {
+    margin-bottom: 80px;
+}
+
+.b-form__input {
+    border-radius: var(--radius);
+    border: 4px solid #EEEEEE;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 500;
+    padding: 25px 40px;
+    font-weight: 500;
+    outline: transparent;
+    transition: all .2s;
+    max-height: 80px;
+
+    &::placeholder {
+        opacity: .6;
+    }
+
+    &:focus {
+        border-color: var(--accent-color);
+    }
+}
+
+.b-form__tetfield {
+    border-radius: var(--radius);
+    border: 4px solid #EEEEEE;
+    font-size: 16px;
+    line-height: 0.1 0.8;
+    font-weight: 500;
+    padding: 25px 40px;
+    font-weight: 600;
+    outline: transparent;
+    transition: all .2s;
+    width: 100%;
+    max-height: 140px;
+
+    &::placeholder {
+        opacity: .6;
+    }
+
+    &:focus {
+        border-color: var(--accent-color);
+    }
+}
+
+.b-form__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-form__agr {
+    max-width: 380px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.b-form__agr-link {
+    font-weight: 700;
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: #000;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        transition: all .3s;
+        width: 100%;
+    }
+
+    &:hover:after {
+        width: 0;
+    }
+}
+
+.b-form__btn {}
+
+.b-btn {}
+
+.b-btn_xl {}
+
+.b-btn_secondary {}
+
+.b-btn_arrrow {}
+
+.b-main__section_form-background {
+    background-repeat: no-repeat;
+    background-size: 90vw;
+    background-position: top center;
+}

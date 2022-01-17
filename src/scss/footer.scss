@@ -1,0 +1,162 @@
+.b-footer {}
+
+.b-footer__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.b-footer__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.b-footer__logo {}
+
+.b-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.b-contacts__tell {
+    display: flex;
+    flex-direction: column;
+}
+
+.b-contacts__operator {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    opacity: .6;
+}
+
+.b-contacts__link {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: all .3s;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+
+}
+
+.b-addresses {}
+
+.b-addresses__address {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.b-addresses__address-link {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    transition: all .3s;
+}
+
+.b-addresses__mail {
+    transition: all .3s;
+    margin-bottom: 40px;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+.b-addresses__mail-link {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.b-socials {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.b-addresses__clue {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 5px;
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: .6;
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+    transition: all .3s;
+
+    &:hover {
+        opacity: 1;
+        color: var(--accent-color);
+    }
+}
+
+.b-footer__col_address {
+    max-width: 400px;
+}
+
+.b-socials__link_facebook {
+    background-image: url('./../img/facebook.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+}
+
+.b-socials__link_instagram {
+    background-image: url('./../img/instagramm.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+}
+
+.b-socials__list-item {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    cursor: pointer;
+
+
+}
+
+.b-socials__link {
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.b-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p {
+        font-size: 14px;
+        line-height: 30px;
+        opacity: .6;
+    }
+}
