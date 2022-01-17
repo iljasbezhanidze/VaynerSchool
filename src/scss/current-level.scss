@@ -1,0 +1,40 @@
+.b-current-level {}
+
+.b-level-card {
+    border-radius: 80px;
+    max-width: 760px;
+    padding: 80px;
+    background-color: #fafafa;
+    border: 40px solid #fff;
+    z-index: 2;
+    position: relative;
+}
+
+.b-current-level__card {}
+
+.b-level-card__title {
+    margin-bottom: 40px;
+    text-align: initial;
+}
+
+.b-level-card__text {
+    font-weight: 500;
+    margin-bottom: 80px;
+}
+
+.b-level-card__btn {}
+
+.b-btn {}
+
+.b-btn_xl {}
+
+.b-btn_arrow {}
+
+.b-btn_secondary {}
+
+.b-current-level__picture {
+    border-radius: var(--radius);
+    z-index: 1;
+    margin-left: auto;
+    margin-top: -30%;
+}
