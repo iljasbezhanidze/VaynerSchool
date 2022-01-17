@@ -1,0 +1,49 @@
+.b-about-section {
+    padding-top: 160px;
+    padding-bottom: 70px;
+    position: relative;
+}
+
+.b-about-section__wrapper {
+    padding: 80px;
+    background-color: #fafafa;
+    border-radius: var(--radius);
+    display: flex;
+}
+
+.b-about-section__text-col {
+    max-width: 640px;
+}
+
+.b-about-section__title {
+    margin-bottom: 80px;
+    text-align: initial;
+}
+
+.b-about-section__description {
+    max-width: 493px;
+    margin-bottom: 80px;
+    font-weight: 500;
+
+    & p {
+        margin-bottom: 5px;
+    }
+}
+
+.b-about-section__text {}
+
+.b-about-section__btn {}
+
+.b-btn {}
+
+.b-btn_xl {}
+
+.b-btn_primary {}
+
+.b-btn_arrow {}
+
+.b-about-section__logo {
+    position: absolute;
+    top: 60px;
+    right: 0;
+}

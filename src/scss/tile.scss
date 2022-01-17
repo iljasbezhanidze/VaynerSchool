@@ -4,6 +4,12 @@
     padding: get-vw(80px);
     display: flex;
     column-gap: 40px;
+    transition: all .4s;
+
+    &:hover > * {
+        // opacity: .70;
+        color: var(--accent-color);
+    }
 }
 
 .b-tile__col {}
@@ -26,10 +32,12 @@
     max-width: 80%;
     margin-bottom: 40px;
     text-align: initial;
+    transition: all .4s;
 }
 
 .b-tile__text {
     font-weight: 500;
+    transition: all .4s;
 }
 
 .b-tile__col-right {}
@@ -45,6 +53,7 @@
 .b-tile__working {
     font-size: 16px;
     font-weight: 600;
+    transition: all .4s;
 }
 
 .b-tile__working {

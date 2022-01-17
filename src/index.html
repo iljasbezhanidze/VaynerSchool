@@ -1,7 +1,8 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
@@ -10,9 +11,11 @@
 			</div>
 		</div>
 		<div class="b-main b-page__content">
-			<section class="b-main__section b-main__section_sticky-left pt-none">
-				<div class="b-main__container b-main__container_first-screen-main-page b-main__container_width-xl" style="background: #E8F6FC">
-					<img class="b-main__container-background b-main__container-background_first-screen-main-page" src="./img/first-screen-bcg.png" alt="" aria-hidden="true">
+			<section class="b-main__section b-main__section_sticky-left pt-none pb-none">
+				<div class="b-main__container b-main__container_first-screen-main-page b-main__container_width-xl"
+					style="background: #E8F6FC">
+					<img class="b-main__container-background b-main__container-background_first-screen-main-page"
+						src="./img/first-screen-bcg.png" alt="" aria-hidden="true">
 					<div class=" b-main__container">
 						@@include('html/first-screen-main-page.html')
 					</div>
@@ -23,9 +26,14 @@
 					@@include('html/slider.html')
 				</div>
 			</section>
-			<section class="b-main__section">
+			<section class="b-main__section pb-none">
 				<div class=" b-main__container">
 					@@include('html/courses.html')
+				</div>
+			</section>
+			<section class="b-main__section">
+				<div class=" b-main__container">
+					@@include('html/about-section.html')
 				</div>
 			</section>
 			<!-- <section class="b-main__section">
@@ -42,4 +50,5 @@
 	</main>
 	@@include('html/_scripts.html')
 </body>
+
 </html>
