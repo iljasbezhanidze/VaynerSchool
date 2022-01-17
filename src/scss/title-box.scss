@@ -1,0 +1,33 @@
+.b-title-box {
+    position: relative;
+    z-index: 2;
+}
+
+.b-first-screen__wrapper {
+    max-width: 660px;
+    padding-top: get-vw(146px);
+    padding-bottom: get-vw(146px);
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @media(min-width: 1920px) {
+        max-width: 50%;
+    }
+}
+.b-title-box__title {
+    margin-bottom: 40px;
+}
+.b-title {
+}
+.b-title_xl {
+}
+.b-title-box__subtitle {
+    margin-bottom: get-vw(120px);
+    max-width: 360px;
+}
+.b-title-box__btn {
+}
+.b-btn {
+}
+.b-btn_primary {
+}

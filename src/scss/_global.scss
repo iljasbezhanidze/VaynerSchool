@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900);
+
+body {
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    color: #141B1F;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+}
+
+.b-page {}
+
+.b-page__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.b-page__container {
+    @extend .b-main__container;
+}
+
+.b-main {}
+
+.b-page__content {}
+
+.b-main__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include lg() {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @include md() {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    @include sm() {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    @include xs() {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @include mob() {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.b-main__container {
+    flex-grow: 1;
+    max-width: var(--container-width);
+}
+
+.b-main__section_sticky-left {
+    justify-content: flex-start;
+    padding-left: 0;
+    @include md(){
+        padding-right: 0;
+    }
+}
+
+.b-main__container_width-xl {
+    background-repeat: no-repeat;
+    block-size: cover;
+    max-width: 100%;
+    margin-right: calc((100vw - var(--container-xl-width)) / 2);
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: calc(var(--radius) * 2);
+    border-top-right-radius: calc(var(--radius) * 2);
+    @include md(){
+        border-radius: 0;
+        margin-right: 0;
+    }
+}
+
+.b-main__container_width-lg {
+    background-repeat: no-repeat;
+    block-size: cover;
+    max-width: 100%;
+    margin-right: calc((100vw - var(--container-lg-width)) / 2);
+    display: flex;
+    justify-content: center;
+    border-bottom-right-radius: calc(var(--radius) * 2);
+    border-top-right-radius: calc(var(--radius) * 2);
+    @include md(){
+        border-radius: 0;
+        margin-right: 0;
+    }
+}
+
+.b-main__container-background {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+}
+
+.b-page-footer {}
+
+.b-page-footer__container {}
+
+.b-title {
+    font-weight: 800;
+
+    &_xl {
+        @include adaptive-font(64, 36);
+        line-height: 1.2;
+    }
+
+    &_lg {
+        @include adaptive-font(48, 28);
+        line-height: 1.4;
+    }
+}
+
+.b-btn {
+    @include adaptive-font(18, 14);
+    border-radius: var(--radius);
+    background-color: transparent;
+    font-weight: 600;
+    padding: 10px 20px;
+    position: relative;
+    transition: color .2s;
+    display: inline-block;
+
+    &_primary {
+        border: 2px solid var(--accent-color);
+
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+
+    &_secondary {
+        border: 2px solid var(--second-color);
+
+        &:hover {
+            color: var(--second-color);
+        }
+    }
+
+    &_xl {
+        font-weight: 700;
+        padding: 22.4px 40px;
+        line-height: 1.75;
+        padding-right: get-vw(150px);
+
+
+        @include md() {
+            padding: 20px 25px;
+            padding-right: get-vw(200px);
+        }
+    }
+
+    &_arrow {
+        &:after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='21' height='14' viewBox='0 0 21 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 6.25H0.75L0.75 7.75H1.5L1.5 6.25ZM18.5 7.75H19.25V6.25H18.5V7.75ZM13.9801 1.42383L13.404 0.943696L12.4437 2.09603L13.0199 2.57617L13.9801 1.42383ZM19.5 7L19.9801 7.57617L20.6715 7L19.9801 6.42383L19.5 7ZM13.0199 11.4238L12.4437 11.904L13.404 13.0563L13.9801 12.5762L13.0199 11.4238ZM1.5 7.75L18.5 7.75V6.25L1.5 6.25L1.5 7.75ZM13.0199 2.57617L19.0199 7.57617L19.9801 6.42383L13.9801 1.42383L13.0199 2.57617ZM19.0199 6.42383L13.0199 11.4238L13.9801 12.5762L19.9801 7.57617L19.0199 6.42383Z' fill='%2347B4EB'/%3E%3C/svg%3E%0A");
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 40px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: filter .2s;
+
+        }
+    }
+
+    &_return {
+        &:after {
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.25L2.25 7.25L2.25 5.75L3 5.75L3 7.25ZM7.51986 0.923833L8.09602 0.443695L9.0563 1.59603L8.48014 2.07616L7.51986 0.923833ZM2 6.5L1.51986 7.07616L0.828462 6.5L1.51986 5.92383L2 6.5ZM8.48014 10.9238L9.0563 11.404L8.09602 12.5563L7.51986 12.0762L8.48014 10.9238ZM2 20.25L1.25 20.25L1.25 18.75L2 18.75L2 20.25ZM13.5 19.5L13.5 20.25L13.5 19.5ZM13.5 7.25L3 7.25L3 5.75L13.5 5.75L13.5 7.25ZM8.48014 2.07616L2.48014 7.07616L1.51986 5.92383L7.51986 0.923833L8.48014 2.07616ZM2.48014 5.92383L8.48014 10.9238L7.51986 12.0762L1.51986 7.07616L2.48014 5.92383ZM13.5 20.25L2 20.25L2 18.75L13.5 18.75L13.5 20.25ZM20.75 13C20.75 17.0041 17.5041 20.25 13.5 20.25L13.5 18.75C16.6756 18.75 19.25 16.1756 19.25 13L20.75 13ZM13.5 5.75C17.5041 5.75 20.75 8.99594 20.75 13L19.25 13C19.25 9.82436 16.6756 7.25 13.5 7.25L13.5 5.75Z' fill='%2347B4EB'/%3E%3C/svg%3E ");
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 40px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: filter .2s;
+        }
+    }
+}
+.b-mark {
+    font-size: 12px;
+    border-radius: var(--radius);
+    background-color: var(--accent-color);
+    padding: 10px 20px;
+    display: inline-block;
+    color: #fff;
+}

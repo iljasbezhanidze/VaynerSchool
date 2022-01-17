@@ -1,0 +1,89 @@
+.b-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-logo {}
+
+.b-header__logo {
+    max-width: 312px;
+    max-height: 74px;
+    object-fit: content;
+}
+
+.b-logo__image {}
+
+.b-nav {}
+
+.b-header__menu {}
+
+.b-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b-nav__menu {}
+
+.b-menu__item {
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &:last-child {
+        margin-left: 60px;
+    }
+}
+
+.b-menu__link {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .2s;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+.b-select-phone__active-number {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.b-menu__link_disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+}
+
+.b-select-phone {}
+
+.b-select-phone__number {
+    display: none;
+
+    &.show-num {
+        display: block;
+    }
+}
+
+.b-select-phone__call {}
+
+.b-select-phone__current {
+    transition: color .2s;
+
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+.b-select-phone__btn {
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 2L6 6L2 2' stroke='%23141B1F' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center;
+    width: 10px;
+    height: 10px;
+}
