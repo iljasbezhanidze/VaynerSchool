@@ -132,7 +132,7 @@ body {
 .b-page-footer {
     display: flex;
     justify-content: center;
-    padding: 160px;
+    padding: get-vw(160px);
     padding-bottom: 66px;
 }
 
