@@ -2,12 +2,13 @@
 
 .b-level-card {
     border-radius: 80px;
-    max-width: 760px;
-    padding: 80px;
+    width: 50%;
+    padding: get-vw(80px);
     background-color: #fafafa;
-    border: 40px solid #fff;
+    border: get-vw(40px) solid #fff;
     z-index: 2;
     position: relative;
+    min-width: 450px;
 }
 
 .b-current-level__card {}
@@ -15,11 +16,12 @@
 .b-level-card__title {
     margin-bottom: 40px;
     text-align: initial;
+    box-sizing: content-box;
 }
 
 .b-level-card__text {
     font-weight: 500;
-    margin-bottom: 80px;
+    margin-bottom: get-vw(80px);
 }
 
 .b-level-card__btn {}
@@ -37,4 +39,45 @@
     z-index: 1;
     margin-left: auto;
     margin-top: -30%;
+    width: 83%;
+    object-fit: cover;
+
+    @include md() {
+        margin-top: -10%;
+    }
+}
+
+@include xs() {
+    .b-level-card {
+        border: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .b-current-level__picture {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    @media(max-width: 460px) {
+
+        .b-level-card,
+        .b-current-level__picture {
+            width: 100vw;
+            max-width: 100vw;
+            min-width: 100vw;
+        }
+        .b-current-level__picture {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
 }
