@@ -3,8 +3,25 @@ document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault
 
 //burger
 const burger = document.querySelector('.b-burger')
-burger.addEventListener('click', () => burger.classList.toggle('active-burger'))
-    
+const menu = document.querySelector('.b-menu')
+burger.addEventListener('click', () => {
+    if(!menu.classList.contains('active-block') && !menu.classList.contains('active-menu')){
+        burger.classList.toggle('active-burger')
+        menu.classList.add('active-block')
+        setTimeout(() => {
+            menu.classList.add('active-menu')
+        }, 100);
+        document.body.classList.add('b-fixed')
+    }
+    if (menu.classList.contains('active-block') && menu.classList.contains('active-menu')) {
+        menu.classList.remove('active-menu')
+        setTimeout(() => {
+            menu.classList.remove('active-block')
+        }, 400);
+        document.body.classList.remove('b-fixed')
+    }
+})
+
 
 
 //sliders

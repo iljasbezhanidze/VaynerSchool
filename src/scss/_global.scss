@@ -10,6 +10,12 @@ body {
     font-variant-numeric: lining-nums;
 }
 
+.b-fixed {
+    // position: absolute;
+    // height: 100%;
+    overflow-y: hidden;
+}
+
 .b-page {
     overflow-x: hidden;
 }
