@@ -7,9 +7,12 @@
 .b-logo {}
 
 .b-header__logo {
+    min-width: 220px;
     max-width: 312px;
     max-height: 74px;
     object-fit: content;
+    flex-shrink: 2;
+    margin-right: 20px;
 }
 
 .b-logo__image {}
@@ -30,10 +33,18 @@
 
     &:not(:last-child) {
         margin-right: 30px;
+
+        @include lg() {
+            margin-right: 15px;
+        }
     }
 
     &:last-child {
         margin-left: 60px;
+
+        @include xl() {
+            margin-left: 20px;
+        }
     }
 }
 
@@ -42,6 +53,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: color .2s;
+    white-space: nowrap;
 
     &:hover {
         color: var(--accent-color);
@@ -73,6 +85,7 @@
 
 .b-select-phone__current {
     transition: color .2s;
+    white-space: nowrap;
 
     &:hover {
         color: var(--accent-color);
@@ -86,4 +99,165 @@
     background-position: center;
     width: 10px;
     height: 10px;
+}
+
+.b-header__logo_mob {
+    display: none;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+}
+
+//adaptive
+@include md() {
+    .b-header {
+        flex-direction: column;
+        min-width: 100%;
+        // position: relative;
+    }
+
+    .b-header__logo {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@include sm() {
+    .b-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+    .b-header__logo {
+        margin-right: auto;
+    }
+
+    .b-menu__item {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .b-menu__link {
+        font-size: 22px;
+        width: 100%;
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+
+    .b-select-phone__current {
+        padding-top: 30px;
+    }
+
+    .b-select-phone__btn {
+        display: none;
+    }
+
+    .b-select-phone__active-number,
+    .b-select-phone__number {
+        display: block;
+        font-weight: 700;
+        font-size: 22px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .b-burger {
+        position: absolute;
+        z-index: 9999;
+        right: 40px;
+        top: 52px;
+        width: 40px;
+        height: 28px;
+    }
+
+
+
+    .b-burger__btn_open {
+        width: 40px;
+        height: 4px;
+        background-color: var(--accent-color);
+        position: absolute;
+        border-radius: 40px;
+        transform: scale(1);
+        transition: transform .3s cubic-bezier(0, 1.64, 1, 1), opacity .4s;
+        transform-origin: center;
+        opacity: 1;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            background-color: var(--accent-color);
+            border-radius: 40px;
+            width: 40px;
+            height: 4px;
+            left: 0;
+        }
+    }
+
+    .b-burger__btn_open {
+        display: block;
+
+        &:after {
+            top: -10px;
+        }
+
+        &:before {
+            top: 10px;
+        }
+    }
+
+    .b-burger__btn_close {
+        border-radius: 40px;
+        width: 20px;
+        height: 18px;
+        position: relative;
+        transform: scale(0);
+        top: -15px;
+        left: -1px;
+        transition: transform .3s cubic-bezier(0, 1.64, 1, 1), opacity .4s;
+        transform-origin: right;
+        opacity: 0;
+
+        & .b-burger_line {
+            height: 4px;
+            background-color: var(--second-color);
+            width: 40px;
+            position: absolute;
+            left: 0;
+            border-radius: 40px;
+
+            &_first {
+                top: 0;
+                width: 40px;
+                transform-origin: center;
+                transform: rotate(45deg) translate(12px, 10px);
+            }
+
+            &_second {
+                width: 40px;
+                transform-origin: center;
+                transform: rotate(-45deg) translate(0px, 2px);
+                bottom: 0;
+                width: 40px;
+            }
+        }
+    }
+}
+.b-burger.active-burger {
+        
+    .b-burger__btn_open {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .b-burger__btn_close {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

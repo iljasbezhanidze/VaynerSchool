@@ -1,6 +1,12 @@
 //disabled link
 document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault()
 
+//burger
+const burger = document.querySelector('.b-burger')
+burger.addEventListener('click', () => burger.classList.toggle('active-burger'))
+    
+
+
 //sliders
 const swiper = new Swiper(".mySwiper", {
     spaceBetween: 100,

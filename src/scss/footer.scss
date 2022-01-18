@@ -105,9 +105,6 @@
 }
 
 .b-socials__link_facebook {
-    background-image: url('./../img/facebook.svg');
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
     width: 60px;
     height: 60px;
     display: block;
@@ -120,9 +117,6 @@
 }
 
 .b-socials__link_instagram {
-    background-image: url('./../img/instagramm.svg');
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
     width: 60px;
     height: 60px;
     display: block;
@@ -144,8 +138,9 @@
 }
 
 .b-socials__link {
-    &:hover {
-        opacity: .8;
+    &:hover svg path {
+        transition: fill .3s;
+        fill: var(--accent-color);
     }
 }
 
@@ -154,9 +149,35 @@
     justify-content: space-between;
     align-items: center;
 
-    & p {
+    & p,
+    & a {
         font-size: 14px;
         line-height: 30px;
         opacity: .6;
+    }
+
+    & a {
+        position: relative;
+        
+        &:hover span:last-child {
+            transition: color .4s;
+            color: #f5ca09;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 0;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: #f5ca09;
+            transition: width .4s ease-in .6s;
+        }
+
+    }
+    &:hover a:after {
+        width: 100%;
     }
 }

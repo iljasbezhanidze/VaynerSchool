@@ -7,9 +7,12 @@ body {
     color: #141B1F;
     line-height: 1.6;
     font-family: 'Raleway', sans-serif;
+    font-variant-numeric: lining-nums;
 }
 
-.b-page {}
+.b-page {
+    overflow-x: hidden;
+}
 
 .b-page__header {
     width: 100%;
@@ -17,6 +20,8 @@ body {
     justify-content: center;
     padding-top: 23px;
     padding-bottom: 23px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .b-page__container {
@@ -252,9 +257,9 @@ body {
 }
 
 .pt-none {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .pb-none {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
 }
