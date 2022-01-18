@@ -11,9 +11,9 @@
     @include md(){
         padding-top: 90px;
     }
-    @include sm(){
-        padding-top: 60px;
-    }
+    // @include sm(){
+    //     padding-top: 60px;
+    // }
 }
 
 .b-about-section__wrapper {
@@ -107,5 +107,7 @@
         width: 100vw;
         padding-left: 25px;
         padding-right: 25px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
