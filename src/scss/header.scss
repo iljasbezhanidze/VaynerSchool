@@ -147,12 +147,15 @@
             display: flex;
         }
     }
+
     .b-menu__item:first-child {
         margin-top: auto;
     }
+
     .b-menu__item:last-child {
         margin-bottom: auto;
     }
+
     .b-select-phone {
         margin-top: 100px;
     }

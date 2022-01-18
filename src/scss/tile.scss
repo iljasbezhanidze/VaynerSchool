@@ -10,6 +10,10 @@
         // opacity: .70;
         color: var(--accent-color);
     }
+
+    @media(max-width: 900px){
+        flex-direction: column;
+    }
 }
 
 .b-tile__col {}
@@ -38,6 +42,10 @@
 .b-tile__text {
     font-weight: 500;
     transition: all .4s;
+
+    @media(max-width: 900px){
+        margin-bottom: 30px;
+    }
 }
 
 .b-tile__col-right {}
@@ -47,6 +55,7 @@
     max-height: 200px;
     border-radius: var(--radius);
     margin-bottom: 34px;
+    aspect-ratio: 1/1;
 }
 
 .b-tile__group,

@@ -217,6 +217,10 @@ body {
             background-repeat: no-repeat;
             background-position: center;
             transition: filter .2s, margin-right .6s;
+
+        }
+        @media(max-width: 770px){
+            padding-right: 75px;
         }
 
         &:hover:after {
