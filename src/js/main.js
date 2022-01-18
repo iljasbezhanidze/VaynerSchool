@@ -5,8 +5,8 @@ document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault
 const burger = document.querySelector('.b-burger')
 const menu = document.querySelector('.b-menu')
 burger.addEventListener('click', () => {
-    if(!menu.classList.contains('active-block') && !menu.classList.contains('active-menu')){
-        burger.classList.toggle('active-burger')
+    burger.classList.toggle('active-burger')
+    if (!menu.classList.contains('active-block') && !menu.classList.contains('active-menu')) {
         menu.classList.add('active-block')
         setTimeout(() => {
             menu.classList.add('active-menu')
