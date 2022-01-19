@@ -160,6 +160,9 @@
 
     & a {
         position: relative;
+        @media(max-width: 480px){
+            margin-bottom: 15px;
+        }
 
         &:hover span:last-child {
             transition: color .4s;
@@ -182,6 +185,9 @@
 
     &:hover a:after {
         width: 100%;
+    }
+    @media(max-width: 480px){
+        flex-direction: column;
     }
 }
 

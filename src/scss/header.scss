@@ -314,3 +314,9 @@
         top: 44px;
     }
 }
+
+@include xs(){
+    .b-header__logo {
+        margin-bottom: 0;
+    }
+}

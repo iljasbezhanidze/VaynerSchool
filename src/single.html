@@ -1,7 +1,8 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
@@ -10,10 +11,23 @@
 			</div>
 		</div>
 		<div class="b-main b-page__content">
-			<section class="b-main__section">
-				<div class=" b-main__container">
+			<section class="b-main__section pt-none">
+				<div class="b-section-background" style="background: #fafafa;"></div>
+				<div class="b-main__container">
+					@@include('html/first-screen.html', {
+					"page" : "single"
+					})
 				</div>
 			</section>
+			<section class="b-main__section">
+				<div class=" b-main__container">
+					@@include('html/details.html')
+				</div>
+			</section>
+			<!-- <section class="b-main__section">
+				<div class=" b-main__container">
+				</div>
+			</section> -->
 		</div>
 		<div class="b-page-footer">
 			<div class="b-page-footer__container">
@@ -23,4 +37,5 @@
 	</main>
 	@@include('html/_scripts.html')
 </body>
+
 </html>

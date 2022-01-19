@@ -1,9 +1,24 @@
 .b-courses {}
 
-.b-courses__title {}
+.b-courses__title {
+    margin-bottom: 120px;
+    text-align: center;
+
+    @include lg(){
+        margin-bottom: 100px;
+    }
+    @include md(){
+        margin-bottom: 80px;
+    }
+    @include sm(){
+        margin-bottom: 60px;
+    }
+    @include xs(){
+        margin-bottom: 40px;
+    }
+}
 
 .b-title {
-    margin-bottom: 120px;
     text-align: center;
 }
 
@@ -24,6 +39,13 @@
     margin-right: auto;
     display: block;
     margin-top: 80px;
+
+    @include sm(){
+        margin-top: 60px;
+    }
+    @include xs(){
+        margin-top: 40px;
+    }
 }
 
 @media(max-width: 1300px){

@@ -1,0 +1,106 @@
+.b-details-course {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    column-gap: 60px;
+}
+
+.b-details-course__col {
+    max-width: 760px;
+}
+.b-details-course__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 40px;
+
+    & .b-details__value-position {
+        margin-bottom: 0 !important;
+    }
+    
+    & .b-details__title-position {
+        margin-bottom: 5px;
+    }
+}
+
+.b-details-course__details .b-details__position{
+    &:before {
+        background-color: #E8F6FC;
+    }
+}
+.b-details-course__col_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.b-title {}
+
+.b-title_lg {}
+
+.b-details {}
+
+
+.b-details__position {}
+
+.b-details__title-position {}
+
+.b-details__value-position {}
+
+.b-details-course__col_right {}
+
+
+.b-details-course__text {
+    font-weight: 500;
+    @include adaptive-font(24,18);
+}
+
+.b-details-course__text:not(:last-child) {
+    margin-bottom: 12px;
+}
+.b-details__value-position_time {
+    white-space: nowrap;
+}
+
+@media(max-width: 1200px){
+    .b-first-screen_singl-page {
+
+        & .b-description-course {
+            flex-direction: column-reverse;
+        }
+
+        & .b-description-course__col_right {
+            margin-left: 44px;
+            margin-bottom: 40px;
+        }
+
+        & .b-description-course {
+            width: fit-content;
+        }
+
+        & .b-first-screen__inner {
+            max-width: max-content;
+        }
+
+        & .b-first-screen__wrapper {
+            justify-content: space-evenly;
+        }
+        
+        @include md(){
+            & .b-first-screen__wrapper {
+                justify-content: space-between;
+            }
+
+            & .b-first-screen__inner  {
+                flex-shrink: 1;
+            }
+        }
+    }
+
+    // .b-first-screen__inner {
+    //     max-width: 100%;
+    //     min-width: 100%;
+    //     // width: 1200px;
+    // }
+}

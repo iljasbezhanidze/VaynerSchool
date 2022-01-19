@@ -65,9 +65,16 @@
     &:focus {
         border-color: var(--accent-color);
     }
-    @media(max-width: 620px){
-        margin-bottom: 20px;
-        min-width: 100%;
+
+    &:not(:last-child) {
+        @media(max-width: 620px){
+            margin-bottom: 20px;
+            min-width: 100%;
+        }
+    }
+    
+    @include mob(){
+        padding: 15px 25px;
     }
 }
 

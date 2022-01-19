@@ -1,0 +1,116 @@
+.b-description-course {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 40px;
+    width: 100%;
+    max-width: 760px;
+    z-index: 2;
+    flex-shrink: 2;
+
+    @include lg(){
+        column-gap: 20px;
+    }
+}
+
+.b-details__title {
+    margin-bottom: 40px;
+}
+
+.b-description-course__col {
+    display: flex;
+    flex-direction: column;
+}
+
+.b-details-course .b-description-course__col_left {
+    // min-width: 600px;
+    @include xl() {
+        flex: 1 0 auto;
+    }
+}
+
+.b-details {}
+
+.b-description-course__details {}
+
+.b-details__position {
+    position: relative;
+    padding-left: 44px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 8px;
+    }
+}
+
+.b-details__title-position {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 500;
+    // margin-bottom: 5px;
+    display: block;
+}
+
+.b-details__value-position {
+    @include adaptive-font(24,20);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.b-details__position:not(:last-child) .b-details__value-position {
+    margin-bottom: 18px;
+
+    @include xl(){
+        margin-bottom: 5px;
+    }
+}
+
+.b-description-course__col_right {
+    @include xl() {
+        flex: 0 1 auto;
+    }
+}
+
+.b-details__illustration {
+    border-radius: var(--radius);
+    height: 100%;
+    max-width: 280px;
+    max-height: 280px;
+
+    @media (max-width: 1300px){
+        width: 220px;
+        height: 220px;    }
+}
+
+.b-first-screen_singl-page {
+    & .b-first-screen__inner {
+        padding-top: get-vw(160px);
+    }
+
+    & .b-description-course {
+        padding-top: get-vw(160px);
+    }
+
+    & .b-title-box__title {
+        margin-bottom: 40px;
+    }
+
+    & .b-title-box__subtitle {
+        margin-bottom: 80px;
+    }
+}
+
+// .b-first-screen_singl-page .b-first-screen__inner {
+//     padding-left: 0;
+//     padding-right: 0;
+// }
+
+.b-details-course__col_left {
+    flex: 2 0 auto;
+}

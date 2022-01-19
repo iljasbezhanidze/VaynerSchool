@@ -1,0 +1,73 @@
+.b-main__container_first-screen-main-page {
+    position: relative;
+    overflow: hidden;
+}
+
+.b-main__container-background_first-screen-main-page {
+    top: 0;
+    right: 0;
+}
+
+.b-section-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 83vw;
+    bottom: 0;
+    background-position: right;
+    background-size: cover;
+    // right: calc(100vw - 1640px);
+    border-top-right-radius: calc(var(--radius) * 2);
+    z-index: 1;
+
+    @media(max-width: 1200px) {
+        width: 100vw;
+        border-top-right-radius: 0;
+    }
+}
+
+@include sm() {
+    .b-first-screen_singl-page .b-first-screen__wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .b-first-screen_singl-page .b-description-course {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .b-first-screen_singl-page .b-description-course__col_right {
+        margin-bottom: 0;
+    }
+
+    .b-first-screen_singl-page .b-first-screen__inner {
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+    }
+    .b-first-screen_singl-page .b-title-box__subtitle {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .b-first-screen_singl-page .b-details__position {
+        padding-left: 0;
+    }
+    .b-first-screen_singl-page .b-title-box {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@include xs(){
+    .b-first-screen_singl-page {
+        // & .b-description-course {
+        //     flex-direction: column-reverse;
+        // }
+
+        & .b-details__illustration {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

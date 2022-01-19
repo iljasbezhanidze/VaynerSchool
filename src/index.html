@@ -17,7 +17,9 @@
 					<img class="b-main__container-background b-main__container-background_first-screen-main-page"
 						src="./img/first-screen-bcg.png" alt="" aria-hidden="true">
 					<div class=" b-main__container">
-						@@include('html/first-screen-main-page.html')
+						@@include('html/first-screen.html', {
+							"page": "main"
+						})
 					</div>
 				</div>
 			</section>
@@ -30,7 +32,7 @@
 				<div class=" b-main__container">
 					@@include('html/courses.html', {
 						"page" : "main",
-						 button: "true"
+						 "button": "true"
 					})
 				</div>
 			</section>
