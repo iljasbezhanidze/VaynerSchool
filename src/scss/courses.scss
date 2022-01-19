@@ -8,7 +8,6 @@
 }
 
 .b-courses__list {
-    margin-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -24,6 +23,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    margin-top: 80px;
 }
 
 @media(max-width: 1300px){

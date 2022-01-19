@@ -1,7 +1,102 @@
-<div class="b-courses">
-    <h2 class="b-courses__title b-title b-title_lg">Популярные курсы</h2>
-    <ul class="b-courses__list">
-       <div class="b-courses__list-item">
+
+        <!-- main page -->
+    @@if(page == "main"){
+        <div class="b-courses">
+        <h2 class="b-courses__title b-title b-title_lg">Популярные курсы</h2>
+        <ul class="b-courses__list">
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для взрослых",
+                    "title" : "Английский вечером",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для детей",
+                    "title" : "Английский для детей",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon2.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для взрослых",
+                    "title" : "Английский по выходным",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon3.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для взрослых",
+                    "title" : "Английский утром",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon4.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+        </ul>
+        @@if(button == "true"){
+            <button class="b-courses__show-more b-btn b-btn_arrow b-btn_xl b-btn_primary">Ко всем курсам</button>
+        }
+    </div>
+}
+
+<!-- page learn -->
+@@if(page == "learn") {
+    <div class="b-courses">
+        <h2 class="b-courses__title b-title b-title_lg">Обучение</h2>
+        <ul class="b-courses__list">
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для взрослых",
+                    "title" : "Английский вечером",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для детей",
+                    "title" : "Английский для детей",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon2.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для взрослых",
+                    "title" : "Английский по выходным",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon3.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
+                @@include('tile.html', {
+                    "mark" : "Для взрослых",
+                    "title" : "Английский утром",
+                    "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+                    "path" : "./../img/course-icon4.jpg",
+                    "working" : "2 раза в неделю",
+                    "group": "до 8 человек в группе"
+                })
+           </li>
+           <li class="b-courses__list-item">
             @@include('tile.html', {
                 "mark" : "Для взрослых",
                 "title" : "Английский вечером",
@@ -10,37 +105,40 @@
                 "working" : "2 раза в неделю",
                 "group": "до 8 человек в группе"
             })
-       </div>
-       <div class="b-courses__list-item">
-            @@include('tile.html', {
-                "mark" : "Для детей",
-                "title" : "Английский для детей",
-                "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
-                "path" : "./../img/course-icon2.jpg",
-                "working" : "2 раза в неделю",
-                "group": "до 8 человек в группе"
-            })
-       </div>
-       <div class="b-courses__list-item">
-            @@include('tile.html', {
-                "mark" : "Для взрослых",
-                "title" : "Английский по выходным",
-                "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
-                "path" : "./../img/course-icon3.jpg",
-                "working" : "2 раза в неделю",
-                "group": "до 8 человек в группе"
-            })
-       </div>
-       <div class="b-courses__list-item">
-            @@include('tile.html', {
-                "mark" : "Для взрослых",
-                "title" : "Английский утром",
-                "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
-                "path" : "./../img/course-icon4.jpg",
-                "working" : "2 раза в неделю",
-                "group": "до 8 человек в группе"
-            })
-       </div>
-    </ul>
-    <button class="b-courses__show-more b-btn b-btn_arrow b-btn_xl b-btn_primary">Ко всем курсам</button>
-</div>
+       </li>
+       <li class="b-courses__list-item">
+        @@include('tile.html', {
+            "mark" : "Для детей",
+            "title" : "Английский для детей",
+            "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+            "path" : "./../img/course-icon2.jpg",
+            "working" : "2 раза в неделю",
+            "group": "до 8 человек в группе"
+        })
+   </li>
+   <li class="b-courses__list-item">
+    @@include('tile.html', {
+        "mark" : "Для взрослых",
+        "title" : "Английский по выходным",
+        "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+        "path" : "./../img/course-icon3.jpg",
+        "working" : "2 раза в неделю",
+        "group": "до 8 человек в группе"
+    })
+</li>
+<li class="b-courses__list-item">
+    @@include('tile.html', {
+        "mark" : "Для взрослых",
+        "title" : "Английский утром",
+        "text" : "Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации",
+        "path" : "./../img/course-icon4.jpg",
+        "working" : "2 раза в неделю",
+        "group": "до 8 человек в группе"
+    })
+</li>
+        </ul>
+        @@if(button == "true"){
+            <button class="b-courses__show-more b-btn b-btn_arrow b-btn_xl b-btn_primary">Ко всем курсам</button>
+        }
+    </div>
+}

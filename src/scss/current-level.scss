@@ -9,6 +9,8 @@
     z-index: 2;
     position: relative;
     min-width: 450px;
+    margin-top: get-vw(-40px);
+    margin-left: get-vw(-40px);
 }
 
 .b-current-level__card {}
@@ -57,6 +59,8 @@
         padding-right: 25px;
         padding-top: 40px;
         padding-bottom: 40px;
+        margin-top: 0;
+        margin-left: 0;
     }
 
     .b-current-level__picture {
