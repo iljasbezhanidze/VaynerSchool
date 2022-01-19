@@ -320,3 +320,8 @@
         margin-bottom: 0;
     }
 }
+@media(max-width: 360px){
+    .b-header__logo {
+        max-width: 200px;
+    }
+}

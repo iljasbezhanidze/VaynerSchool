@@ -3,11 +3,16 @@
     align-items: stretch;
     justify-content: space-between;
     column-gap: 60px;
+
+    @include sm(){
+        flex-direction: column;
+    }
 }
 
 .b-details-course__col {
     max-width: 760px;
 }
+
 .b-details-course__details {
     display: flex;
     justify-content: space-between;
@@ -17,17 +22,44 @@
     & .b-details__value-position {
         margin-bottom: 0 !important;
     }
-    
+
     & .b-details__title-position {
         margin-bottom: 5px;
     }
+
+    @include lg() {
+        flex-direction: column;
+    }
+
+    @include sm(){
+        justify-content: left;
+        flex-direction: row;
+    }
+
+    @include xs(){
+        flex-direction: column;
+    }
 }
 
-.b-details-course__details .b-details__position{
+@include xs(){
+    .b-details-course__details:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+.b-details-course__details .b-details__position {
+
+    @include lg() {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
     &:before {
         background-color: #E8F6FC;
     }
 }
+
 .b-details-course__col_left {
     display: flex;
     flex-direction: column;
@@ -53,17 +85,22 @@
 
 .b-details-course__text {
     font-weight: 500;
-    @include adaptive-font(24,18);
+    @include adaptive-font(24, 18);
+
+    @include lg() {
+        font-size: 20px;
+    }
 }
 
 .b-details-course__text:not(:last-child) {
     margin-bottom: 12px;
 }
+
 .b-details__value-position_time {
     white-space: nowrap;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 1200px) {
     .b-first-screen_singl-page {
 
         & .b-description-course {
@@ -86,15 +123,21 @@
         & .b-first-screen__wrapper {
             justify-content: space-evenly;
         }
-        
-        @include md(){
+
+        @include md() {
             & .b-first-screen__wrapper {
                 justify-content: space-between;
             }
 
-            & .b-first-screen__inner  {
+            & .b-first-screen__inner {
                 flex-shrink: 1;
             }
+
+        }
+    }
+    .b-first-screen_singl-page .b-first-screen__inner {
+        @media(max-width: 1200px) {
+            padding-bottom: 19vw;
         }
     }
 
