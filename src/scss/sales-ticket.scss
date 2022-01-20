@@ -2,13 +2,33 @@
     background-color: #fff;
     border-radius: var(--radius);
     padding: get-vw(160px);
+
+    @include xl(){
+        padding: get-vw(100px);
+    }
+
+    @include xs(){
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100vw;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 .b-ticket__title {
     font-weight: 700;
-    @include adaptive-font(36, 24);
+    @include adaptive-font(36, 22);
     line-height: 1.4;
     margin-bottom: 80px;
+
+    @include lg(){
+        margin-bottom: 60px;
+    }
+    @include xs(){
+        margin-bottom: 40px;
+    }
 }
 
 .b-ticket__payments {
@@ -16,6 +36,9 @@
     line-height: 1.4;
     font-weight: 700;
     margin-bottom: 40px;
+    @include xs(){
+    margin-bottom: 20px;
+    }
 }
 
 .b-ticket__price {

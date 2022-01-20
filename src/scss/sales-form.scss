@@ -2,28 +2,87 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 20px;
+    column-gap: get-vw(80px);
 }
+
 .b-sales-form__item {
     max-width: 760px;
+
+    @include lg() {
+        max-width: 600px;
+    }
+
+}
+
+.b-sales-form__item_ticket {
+    min-width: 332px;
+}
+.b-sales-form__item_form {
+    @include xs() {
+        padding: 20px;
+    }
 }
 
 .b-sales-form__item .b-form {
-   flex: 1;
-    
+    flex: 1 1;
+
     & .b-form__wrapper {
         flex-direction: column;
     }
+
     & .b-form__input:not(:last-child) {
         margin-bottom: 40px;
+
+        @include lg() {
+            margin-bottom: 20px;
+        }
     }
+
     & .b-form__input {
         max-width: 100%;
         flex: 1 1 100%;
     }
+
+    & .b-form__inner {
+        @include lg() {
+            margin-bottom: 40px;
+        }
+    }
+
+    & .b-form__bottom-wrapper {
+        @include md() {
+            flex-direction: column;
+            row-gap: 20px;
+            align-items: flex-end;
+            text-align: end;
+        }
+    }
 }
 
 .b-sales-form__item__title {
-    @include adaptive-font(36, 24);
+    @include adaptive-font(36, 22);
     margin-bottom: 80px;
+
+    @include lg() {
+        margin-bottom: 60px;
+    }
+
+    @include md() {
+        margin-bottom: 40px;
+    }
+
+   
+}
+
+@include sm () {
+    .b-sales-form__wrapper {
+        flex-direction: column;
+    }
+
+    .b-sales-form__item_ticket {
+        margin-bottom: 40px;
+        min-width: auto;
+    }
+
+    .b-sales-form__item .b-form {}
 }
