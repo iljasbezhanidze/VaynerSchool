@@ -1,0 +1,20 @@
+.b-about-description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 40px;
+}
+
+.b-about-description__strong-text {
+    max-width: 760px;
+    @include adaptive-font(36, 24);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.b-about-description__accompanying-text {
+    max-width: 760px;
+    @include adaptive-font(24, 18);
+    font-weight: 500;
+    line-height: 1.6;
+}

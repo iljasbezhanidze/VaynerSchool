@@ -1,7 +1,8 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
@@ -10,11 +11,40 @@
 			</div>
 		</div>
 		<div class="b-main b-page__content">
-			<section class="b-main__section">
+			<section class="b-main__section pt-none">
 				<div class=" b-main__container">
+					@@include('html/about-first-screen.html')
 				</div>
 			</section>
 		</div>
+		<section class="b-main__section">
+			<div class=" b-main__container">
+				<div class="b-about-description">
+					<p class="b-about-description__strong-text">
+						Наша цель: выйти вместе с нашими студентами за пределы родного языка и преодолеть языковой
+						барьер
+					</p>
+					<p class="b-about-description__accompanying-text">
+						Vayner School это частная школа по обучению иностранным языкам в Киеве. Центральное место на
+						наших образовательных курсах занимает английский язык. Тем не менее, желающие общаться на
+						немецком, французском либо других языках — наши регулярные посетители.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section class="b-main__section">
+			<div class=" b-main__container">
+				@@include('html/advantages.html', {
+				page: 'main'
+				})
+			</div>
+		</section>
+		<section class="b-main__section b-main__section_form-background"
+			style="background-image: url('./img/form-bcg.png');">
+			<div class="b-main__container b-main__container_sm">
+				@@include('html/form.html')
+			</div>
+		</section>
 		<div class="b-page-footer">
 			<div class="b-page-footer__container">
 				@@include('html/footer.html')
@@ -23,4 +53,5 @@
 	</main>
 	@@include('html/_scripts.html')
 </body>
+
 </html>

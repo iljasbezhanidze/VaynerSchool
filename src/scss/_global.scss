@@ -205,7 +205,9 @@ body {
         line-height: 1.75;
         padding-right: get-vw(144px);
         @include mob(){
-            padding-right: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 25px;
         }
 
 
