@@ -3,18 +3,26 @@
     justify-content: space-between;
     width: 100%;
     column-gap: 40px;
+
+    @include md(){
+        flex-direction: column;
+    }
 }
 
 .b-about-description__strong-text {
     max-width: 760px;
     @include adaptive-font(36, 24);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
+
+    @include md(){
+        margin-bottom: 40px;
+    }
 }
 
 .b-about-description__accompanying-text {
     max-width: 760px;
     @include adaptive-font(24, 18);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.6;
 }

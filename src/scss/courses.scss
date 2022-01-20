@@ -2,7 +2,7 @@
 
 .b-courses__title {
     margin-bottom: 120px;
-    text-align: center;
+    text-align: center !important;
 
     @include lg(){
         margin-bottom: 100px;

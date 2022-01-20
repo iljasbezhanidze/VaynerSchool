@@ -59,9 +59,10 @@
     }
 }
 
-.b-sales-form__item__title {
+.b-sales-form__item_title {
     @include adaptive-font(36, 22);
     margin-bottom: 80px;
+    font-weight: 600;
 
     @include lg() {
         margin-bottom: 60px;

@@ -18,7 +18,7 @@
 }
 
 .b-ticket__title {
-    font-weight: 700;
+    font-weight: 600;
     @include adaptive-font(36, 22);
     line-height: 1.4;
     margin-bottom: 80px;
@@ -34,11 +34,15 @@
 .b-ticket__payments {
     font-size: 18px;
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 40px;
     @include xs(){
     margin-bottom: 20px;
     }
+}
+
+.b-ticket__wrapper {
+    display: flex;
 }
 
 .b-ticket__price {
@@ -46,15 +50,11 @@
     font-weight: 700;
     @include adaptive-font(64,38);
     margin-bottom: 20px;
-
-    &:after {
-        content: '₴ / месяц';
-        @include adaptive-font(18,12);
-        vertical-align: top;
-        margin-left: 20px;
-        font-weight: 600;
-    }
-
+}
+.b-ticket__sup {
+    margin-left: 20px;
+    @include adaptive-font(18, 12);
+    font-weight: 500;
 }
 
 .b-ticket__price_current {
@@ -63,22 +63,20 @@
 
 .b-ticket__price_last {
     color: #D0D1D2;
-    position: relative;
     margin-bottom: 40px;
+    text-decoration: line-through;
+    text-decoration-color: #000;
+    text-decoration-style: solid;
+    -webkit-text-decoration-thickness: 2px;
+    text-decoration-thickness: 3px;
 
-    &:before {
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: 5ch;
-        left: 0;
-        top: 50%;
-        background-color: #000;
+    & + .b-ticket__sup {
+        color: #D0D1D2;
     }
 }
 
 .b-ticket__description {
     @include adaptive-font(24, 18);
     line-height: 1.4;
-    font-weight: 600;
+    font-weight: 500;
 }

@@ -24,7 +24,7 @@
 .b-menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
 }
 
 .b-nav__menu {}
@@ -40,7 +40,7 @@
     }
 
     &:last-child {
-        margin-left: 60px;
+        margin-left: 52px;
 
         @include xl() {
             margin-left: 20px;
@@ -50,7 +50,7 @@
 
 .b-menu__link {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: color .2s;
     white-space: nowrap;
@@ -259,7 +259,7 @@
     .b-select-phone__active-number,
     .b-select-phone__number {
         display: block;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 16px;
         padding-top: 5px;
         padding-bottom: 5px;
@@ -277,7 +277,7 @@
         .b-select-phone__active-number,
         .b-select-phone__call {
             font-size: 22px !important;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
         }
     }
 

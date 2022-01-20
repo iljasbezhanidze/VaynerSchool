@@ -2,6 +2,7 @@
 
 .b-list-section__title {
     margin-bottom: 120px;
+    max-width: 593px;
 
     @include lg() {
         margin-bottom: 100px;
@@ -56,7 +57,7 @@
 
 .b-list__punkt {
     @include adaptive-font(28, 20);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
     max-width: 480px;
     flex: 1 1 30%;

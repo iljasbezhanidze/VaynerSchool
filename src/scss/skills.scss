@@ -77,13 +77,13 @@
 
 .b-cards__title {
     @include adaptive-font(36, 22);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .b-cards__text {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 @media(max-width: 1300px){

@@ -7,7 +7,7 @@
 }
 
 .b-advantages__title {
-    text-align: center;
+    text-align: center !important;
     margin-bottom: 120px;
     @include xl(){
         margin-bottom: 100px;
@@ -37,7 +37,7 @@
 }
 
 .b-advantages__item {
-    max-width: 340px;
+    max-width: 400px;
     flex: 1 1 30%;
 }
 
@@ -45,13 +45,13 @@
     display: inline-block;
     margin-left: 20px;
     @include adaptive-font(28, 22);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
     margin-bottom: 40px;
 }
 
 .b-advantages__item-text {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 @media(max-width: 1028px) {

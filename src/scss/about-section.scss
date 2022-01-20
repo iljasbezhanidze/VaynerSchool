@@ -34,12 +34,14 @@
 }
 
 .b-about-section__description {
-    max-width: 493px;
+    max-width: 640px;
     margin-bottom: 80px;
-    font-weight: 500;
+    font-weight: 400;
+    line-height: 1.6;
+    @include adaptive-font(24,18);
 
     & p {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 }
 

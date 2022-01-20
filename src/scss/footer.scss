@@ -35,7 +35,7 @@
 .b-contacts__link {
     @include adaptive-font(24, 18);
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 20px;
     transition: all .3s;
     white-space: nowrap;
@@ -57,7 +57,7 @@
 .b-addresses__address-link {
     @include adaptive-font(24, 18);
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
     transition: all .3s;
 }
 
@@ -73,7 +73,7 @@
 .b-addresses__mail-link {
     @include adaptive-font(24, 18);
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .b-socials {
@@ -150,6 +150,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 500;
 
     & p,
     & a {
@@ -165,7 +166,7 @@
         }
 
         &:hover span:last-child {
-            transition: color .4s;
+            transition: color .4s linear .6s;
             color: #f5ca09;
         }
 
@@ -174,17 +175,17 @@
             display: inline-block;
             position: absolute;
             width: 0;
-            left: 0;
+            left: 50%;
             bottom: 0;
             height: 1px;
             background-color: #f5ca09;
-            transition: width .4s ease-in .6s;
+            transition: all .4s ease-in .1s;
         }
-
     }
 
     &:hover a:after {
-        width: 100%;
+        width: 110%;
+        left: -15px;
     }
     @media(max-width: 480px){
         flex-direction: column;

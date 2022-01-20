@@ -37,6 +37,7 @@
 .b-details__position {
     position: relative;
     padding-left: 44px;
+    // width: 50%;
 
     &:before {
         content: '';
@@ -56,12 +57,14 @@
     font-weight: 500;
     // margin-bottom: 5px;
     display: block;
+    // width: 50%
 }
 
 .b-details__value-position {
     @include adaptive-font(24, 20);
-    font-weight: 700;
+    font-weight: 600;
     opacity: 1;
+    white-space: nowrap;
 }
 
 .b-details__position:not(:last-child) .b-details__value-position {

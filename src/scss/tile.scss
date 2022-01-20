@@ -6,9 +6,8 @@
     column-gap: 40px;
     transition: all .4s;
 
-    &:hover > * {
-        // opacity: .70;
-        color: var(--accent-color);
+    &:hover{
+        background-color: #fafafa;
     }
 
     @media(max-width: 900px){
@@ -44,7 +43,7 @@
 }
 
 .b-tile__text {
-    font-weight: 500;
+    font-weight: 400;
     transition: all .4s;
 
     @media(max-width: 900px){
@@ -65,7 +64,7 @@
 .b-tile__group,
 .b-tile__working {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     transition: all .4s;
 }
 
