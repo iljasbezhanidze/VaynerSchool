@@ -25,7 +25,41 @@ burger.addEventListener('click', () => {
     }
 })
 
+//ACCORDEON
+const accordeonBtn = document.querySelectorAll('[data-accordeon-btn]');
+const accordeonContent = document.querySelectorAll('[data-accordeon-content]');
 
+accordeonBtn.forEach(el => {
+    el.addEventListener('click', event => {
+        if (!el.classList.contains('active')) {
+            cleanActivBtns()
+            el.classList.add('active');
+            const target = event.currentTarget.getAttribute('data-accordeon-btn');
+            hideAccordeons()
+            let currentAccordeon = document.querySelector(`[data-accordeon-content="${target}"]`);
+            var accordeonChild = currentAccordeon.firstElementChild.scrollHeight;
+            currentAccordeon.style.height = `calc(${accordeonChild}px + 10.6vw)`;
+            currentAccordeon.classList.add('active')
+        } else if (el.classList.contains('active')) {
+            cleanActivBtns()
+            hideAccordeons()
+        }
+
+
+        function hideAccordeons() {
+            accordeonContent.forEach(el => {
+                el.style.height = '0';
+                el.classList.remove('active')
+            })
+        }
+
+        function cleanActivBtns() {
+            accordeonBtn.forEach(el => {
+                el.classList.remove('active')
+            })
+        }
+    })
+})
 
 //sliders
 const swiper = new Swiper(".mySwiper", {

@@ -1,0 +1,239 @@
+.b-faq__title {
+    text-align: center;
+    margin-bottom: 120px;
+
+    @include lg() {
+        margin-bottom: 90px;
+    }
+
+    @include md() {
+        margin-bottom: 60px;
+    }
+
+    @include xs() {
+        margin-bottom: 40px;
+    }
+}
+
+.b-faq__col {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    @include md() {
+        flex: 1 1 100%;
+    }
+}
+
+.b-faq__col_left {
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+    flex: 1 1 calc(50% - 60px);
+
+    @include lg() {
+        flex: 1 1 calc(40% - 60px);
+    }
+}
+
+.b-faq__background {
+    position: absolute;
+    top: 587px;
+    left: 0;
+    width: 455px;
+    height: 864px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include md() {
+        display: none;
+    }
+}
+
+.b-faq__title {}
+
+.b-faq__col_right {
+    position: relative;
+    flex: 1 1 calc(50% - 60px);
+
+    @include lg() {
+        flex: 1 1 calc(60% - 60px);
+    }
+}
+
+.b-questions {}
+
+.b-questions__list-item {
+    &:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+
+.b-questions .b-faq__tabs {
+    width: 100%;
+}
+
+.b-question {}
+
+.b-question__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    border-color: var(--accent-color);
+    transition: all .3s;
+    border-bottom: 2px solid #fafafa;
+    cursor: pointer;
+
+    &.active .b-button-toggle:before {
+        transform: translate(-50%, -50%) rotateZ(0);
+    }
+
+    &.active .b-button-toggle {
+        border-color: var(--accent-color);
+    }
+
+    &.active {
+        border-bottom: 2px solid var(--accent-color);
+    }
+
+    @include lg() {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    @include xs() {
+        padding-top: 0;
+    }
+}
+
+.b-question__title {
+    @include adaptive-font(36, 28);
+    line-height: 1.8;
+    font-weight: 400;
+    max-width: 80%;
+
+    @include lg() {
+        font-size: 20px;
+    }
+
+    @include mob() {
+        font-size: 18px;
+    }
+}
+
+.b-question__toggler {
+    width: 60px;
+    height: 60px;
+
+    @include lg() {
+        width: 50px;
+        height: 50px;
+    }
+
+    @include mob() {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.b-button-toggle {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(45deg);
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.92849 1.42893L7.99956 8.5M15.0706 15.5711L7.99956 8.5M7.99956 8.5L15.0706 1.42893M7.99956 8.5L0.928489 15.5711' stroke='%23141B1F' stroke-width='2'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: all .2s;
+
+        @include lg() {
+            width: 15px;
+            height: 15px;
+        }
+
+        @include mob() {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+.b-question__body {
+    transition: all .5s;
+    position: relative;
+    overflow: hidden;
+
+    &.active .b-question__body-content {
+        padding-top: 4.18vw;
+        padding-bottom: 6.25vw;
+    }
+}
+
+.b-question__body-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all .5s;
+}
+
+.b-timetable {}
+
+.b-timetable__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.b-timetable__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    flex-direction: row;
+}
+
+.b-timetable__col {
+    width: max-content;
+}
+
+.b-timetable__col-title {
+    margin-bottom: 40px;
+}
+
+.b-timetable__col-body {}
+
+.b-timetable__path {
+    margin-bottom: 40px;
+}
+
+.b-timetable__path-title {
+    margin-bottom: 10px;
+}
+
+.b-timetable__time {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.b-timetable__path-title,
+.b-timetable__col-title {
+    font-weight: 500;
+    font-size: 18px;
+    opacity: .6;
+}
