@@ -2,8 +2,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 80px;
+    column-gap: 20px;
 }
 .b-sales-form__item {
     max-width: 760px;
+}
+
+.b-sales-form__item .b-form {
+   flex: 1;
+    
+    & .b-form__wrapper {
+        flex-direction: column;
+    }
+    & .b-form__input:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    & .b-form__input {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+.b-sales-form__item__title {
+    @include adaptive-font(36, 24);
+    margin-bottom: 80px;
 }
