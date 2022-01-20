@@ -1,6 +1,9 @@
 //disabled link
 document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault()
 
+//lang select
+
+
 //burger
 const burger = document.querySelector('.b-burger')
 const menu = document.querySelector('.b-menu')

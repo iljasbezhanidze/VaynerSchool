@@ -204,6 +204,9 @@ body {
         padding: 22.4px 40px;
         line-height: 1.75;
         padding-right: get-vw(144px);
+        @include mob(){
+            padding-right: 20px;
+        }
 
 
         @include md() {
@@ -227,7 +230,9 @@ body {
             background-repeat: no-repeat;
             background-position: center;
             transition: filter .2s, margin-right .6s;
-
+            @include mob(){
+                display: none;
+            }
         }
 
         @media(max-width: 770px) {

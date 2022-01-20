@@ -28,7 +28,7 @@
 
 @include sm() {
     .b-first-screen_singl-page .b-first-screen__wrapper {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .b-first-screen_singl-page .b-description-course {

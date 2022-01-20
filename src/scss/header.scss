@@ -60,9 +60,14 @@
     }
 }
 
+.b-select-phone__call,
 .b-select-phone__active-number {
-    font-size: 20px;
+    // font-size: 20px;
     font-weight: 600;
+
+    @include sm() {
+        font-size: 20px;
+    }
 }
 
 .b-menu__link_disabled {
@@ -71,15 +76,62 @@
     pointer-events: none;
 }
 
-.b-select-phone {}
+.b-select-phone {
+    position: relative;
+}
 
-.b-select-phone__number {
-    display: none;
+.b-select-phone__dropdown {
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: -12px;
+    width: 100%;
+    height: 0;
+    display: block;
+    transform: translateY(100%);
+    transition: all .4s;
+    overflow: hidden;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
 
-    &.show-num {
-        display: block;
+    // background-color: #fff;
+    @include sm() {
+        height: auto;
+    }
+
+    @include sm() {
+        left: 0;
     }
 }
+
+.b-select-phone__btn,
+.b-select-phone {
+    transition: all .4s;
+}
+
+.b-select-phone {
+    padding-left: 8px;
+    padding-right: 22px;
+    padding-bottom: 8px;
+
+    .b-select-phone__dropdown {
+        padding-left: 0;
+        padding-right: 15px;
+        background-color: #fff;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+.b-select-phone:hover .b-select-phone__dropdown {
+    height: 200%;
+}
+
+.b-select-phone:hover .b-select-phone__btn {
+    transform: rotate(180deg);
+}
+
 
 .b-select-phone__call {}
 
@@ -88,8 +140,12 @@
     white-space: nowrap;
 
     &:hover {
-        color: var(--accent-color);
+        opacity: .75;
     }
+}
+
+.b-select-phone__number:hover {
+    opacity: .75;
 }
 
 .b-select-phone__btn {
@@ -137,7 +193,14 @@
         padding-bottom: 100px;
         overflow-y: scroll !important;
         height: calc(100vh - 114px);
+        top: 114px;
+
         // justify-content: center;
+        @include mob() {
+            height: calc(100vh - 97px);
+            ;
+            top: 97px;
+        }
 
         &.active-menu {
             left: 0;
@@ -197,7 +260,7 @@
     .b-select-phone__number {
         display: block;
         font-weight: 700;
-        font-size: 22px;
+        font-size: 16px;
         padding-top: 5px;
         padding-bottom: 5px;
     }
@@ -206,15 +269,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+    }
+
+    @include sm() {
+
+        .b-select-phone__active-number,
+        .b-select-phone__call {
+            font-size: 22px !important;
+            font-weight: 700 !important;
+        }
     }
 
     .b-burger {
         position: absolute;
         z-index: 9999;
-        right: 40px;
-        top: 52px;
-        width: 40px;
-        height: 28px;
+        right: 20px;
+        top: 47px;
+        width: 56px ;
+        height: 40px;
+
+        @include mob(){
+            top: 36px !important;
+        }
     }
 
 
@@ -315,12 +392,13 @@
     }
 }
 
-@include xs(){
+@include xs() {
     .b-header__logo {
         margin-bottom: 0;
     }
 }
-@media(max-width: 360px){
+
+@media(max-width: 360px) {
     .b-header__logo {
         max-width: 200px;
     }
