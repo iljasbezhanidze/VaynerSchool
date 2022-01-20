@@ -2,28 +2,63 @@
 
 .b-main-setion__aboute-first-screen {
     position: relative;
-    padding-top: 127px;
-    padding-bottom: 127px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: get-vw(127px);
+    padding-bottom: get-vw(127px);
+    margin-top: get-vw(32px);
+    margin-bottom: get-vw(32px);
+
+    @include sm(){
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
-.b-about-sfirst-screen__wrapper {
-    min-height: 446px;
+.b-about-first-screen__wrapper {
+    min-height: get-vw(446px);
     background-color: #fafafa;
     border-radius: calc(var(--radius) * 2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
+    @include lg(){
+        border-radius: var(--radius);
+    }
+
+    @include md(){
+        min-height: 200px;
+    }
+
+    @include sm(){
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-radius: 20px;
+    }
+    @media(max-width: 530px){
+        width: 100vw;
+        border-radius: 0;
+    }
 }
 
 .b-about-sfirst-screen__logo {
-    max-width: 678px;
-    max-height: 700px;
+    max-width: get-vw(678px);
+    max-height: get-vw(700px);
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 27%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    @include md(){
+        width: 290px;
+        object-fit: contain;
+        left: 22%;
+    }
+    @media(max-width: 530px){
+        display: none;
+    }
 }
 
 .b-about-sfirst-screen__inner {
@@ -31,6 +66,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include  md(){
+        width: 60%;
+    }
+
+    @media(max-width: 530px){
+        align-items: center;
+        width: 100%;
+    }
 }
 
 .b-about-sfirst-screen__subtitle {
@@ -38,9 +82,16 @@
     font-weight: 500px;
     line-height: 1.2;
     margin-bottom: 20px;
+    @include sm(){
+        font-size: 18px;
+    }
 }
 
-.b-about-sfirst-screen__title {}
+.b-about-sfirst-screen__title {
+    @include sm(){
+        font-size: 38px;
+    }
+}
 
 .b-title {}
 
