@@ -108,13 +108,17 @@
 }
 
 .b-question__title {
-    @include adaptive-font(36, 28);
+    @include adaptive-font(36, 24);
     line-height: 1.8;
     font-weight: 400;
     max-width: 80%;
 
     @include lg() {
         font-size: 20px;
+    }
+
+    @include md(){
+        line-height: 1.4;
     }
 
     @include mob() {
@@ -188,6 +192,8 @@
     padding-top: 0;
     padding-bottom: 0;
     transition: all .5s;
+
+    
 }
 
 .b-timetable {}
@@ -229,6 +235,10 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 1.2;
+    
+    @include md(){
+        font-size: 20px;
+    }
 }
 
 .b-timetable__path-title,
