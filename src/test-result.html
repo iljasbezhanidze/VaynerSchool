@@ -1,7 +1,8 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
@@ -13,11 +14,35 @@
 			<section class="b-main__section">
 				<div class=" b-main__container b-main__container_sm">
 					<div class="b-test">
-						<div class="b-test__header">
+						<div class="b-test__header b-test__header_resut">
 							@@include('html/test-header.html', {
-								"title" : "Результат тестирования",
-								"text" : "<p>Вы ответили на 0 вопросов из 10. Но не беспокойтесь — вы на правильном пути.</p><p>Мы поможем вам освоить язык!</p>"
+							"title" : "Результат тестирования",
 							})
+							<p class="b-test-header__text-result">
+								Вы ответили на 4 вопроса из 10. А это значит, что вам есть куда стремится.
+								Осталось подтянуть совсем немного и вы освоите язык!
+							</p>
+						</div>
+						<div class="b-test-result b-test__result-content">
+							<div class="b-test-result__col">
+								<p class="b-test-result__message">
+									Оставьте ваши контакты и мы отправим результат теста с расшифровкой
+									вам на почту. Обещаем не спамить :)
+								</p>
+							</div>
+							<div class="b-test-result__col">
+								<form class="b-test-form b-test-result__form">
+									<input class="b-test-form__input" type="text" placeholder="Имя*">
+									<input class="b-test-form__input" type="text" placeholder="E-mail*">
+									<input class="b-test-form__input" type="number" placeholder="Номер телефона*">
+									<button class="b-test-form__btn b-btn b-btn_xl b-btn_arrow b-btn_secondary">Отправить</button>
+								</form>
+								<div class="b-form b-test-result__agr">
+									<a href="#" class="b-form__agr">Нажимая на кнопку “Отправить”, я соглашаюсь на
+										<span class="b-form__agr-link">обработку персональнных данных.</span>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -37,4 +62,5 @@
 	</main>
 	@@include('html/_scripts.html')
 </body>
+
 </html>
