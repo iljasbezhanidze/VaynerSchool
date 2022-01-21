@@ -1,0 +1,92 @@
+.b-not-find {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+}
+
+.b-section-background_404 {
+    max-height: 816px;
+}
+
+.b-not-find__col {
+    max-width: 760px;
+}
+
+.b-not-find__col_text {
+    flex: 1 0;
+    z-index: 2;
+    position: relative;
+
+    @include xs(){
+        width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+.b-not-find__title {
+    @include adaptive-font(144, 44);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 40px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #141B1F;
+    white-space: nowrap;
+}
+
+.b-not-find__message {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.b-not-find__description {
+    font-size: 18px;
+    margin-bottom: 120px;
+}
+
+.b-not-find__btn {
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.b-not-find__btn_to-home {
+    margin-right: 20px;
+}
+
+.b-not-find__btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.b-btn {}
+
+.b-btn_xl {}
+
+.b-btn_primary {}
+
+.b-btn_return {}
+
+.b-not-find__btn_courses {}
+
+.b-btn_arrow {}
+
+.b-btn_secondary {}
+
+.b-not-find__col {}
+
+.b-not-find__img {
+    @include md(){
+        position: absolute;
+        top: 10%;
+        right: 0;
+        z-index: 1;
+        width: 50%;
+    }
+    @include xs(){
+        display: none;
+    }
+}

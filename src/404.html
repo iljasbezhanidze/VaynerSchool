@@ -1,7 +1,8 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
@@ -10,11 +11,33 @@
 			</div>
 		</div>
 		<div class="b-main b-page__content">
-			<section class="b-main__section">
+			<section class="b-main__section pb-none">
+				<div class="b-section-background b-section-background_404" style="background: #fafafa;"></div>
 				<div class=" b-main__container">
+					<div class="b-not-find">
+						<div class="b-not-find__col b-not-find__col_text">
+							<div class="b-not-find__title">404 Error</div>
+							<div class="b-not-find__message">Похоже вы заблудились :(</div>
+							<div class="b-not-find__description">Страница не найдена(</div>
+							<div class="b-not-find__btn-wrapper">
+								<a class="b-not-find__btn b-not-find__btn_to-home b-btn b-btn_xl b-btn_primary b-btn_return"
+									href="index.html">Вернуться на главную</a>
+								<a class="b-not-find__btn b-not-find__btn_courses b-btn b-btn_xl b-btn_arrow b-btn_secondary"
+									href="courses.html">Курсы</a>
+							</div>
+						</div>
+						<div class="b-not-find__col">
+							<img class="b-not-find__img" src="img/404.svg" alt="error 404">
+						</div>
+					</div>
 				</div>
 			</section>
 		</div>
+		<section class="b-main__section">
+			<div class="b-main__container b-main__container_sm">
+				@@include('html/form.html')
+			</div>
+		</section>
 		<div class="b-page-footer">
 			<div class="b-page-footer__container">
 				@@include('html/footer.html')
@@ -23,4 +46,5 @@
 	</main>
 	@@include('html/_scripts.html')
 </body>
+
 </html>
