@@ -1,26 +1,35 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
-	<main class="b-page">
-		<div class="b-page__header">
-			<div class="b-page__container">
-				@@include('html/header.html')
-			</div>
-		</div>
-		<div class="b-main b-page__content">
-			<section class="b-main__section">
-				<div class=" b-main__container">
-				</div>
-			</section>
-		</div>
-		<div class="b-page-footer">
-			<div class="b-page-footer__container">
-				@@include('html/footer.html')
-			</div>
-		</div>
-	</main>
-	@@include('html/_scripts.html')
+    <main class="b-page">
+        <div class="b-page__header">
+            <div class="b-page__container">
+                @@include('html/header.html')
+            </div>
+        </div>
+        <div class="b-main b-page__content">
+            <section class="b-main__section">
+                <div class="b-section-background b-section-background_article" style="background: #fafafa;"></div>
+                <div class=" b-main__container">
+                    @@include('html/article-first-screen.html')
+                </div>
+            </section>
+            <section class="b-main__section">
+                <div class=" b-main__container">
+                    @@include('html/article-content.html')
+                </div>
+            </section>
+        </div>
+        <div class="b-page-footer">
+            <div class="b-page-footer__container">
+                @@include('html/footer.html')
+            </div>
+        </div>
+    </main>
+    @@include('html/_scripts.html')
 </body>
+
 </html>
