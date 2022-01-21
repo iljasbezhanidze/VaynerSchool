@@ -1,0 +1,35 @@
+.b-first-screen_test-page {
+    & .b-first-screen__wrapper {
+        align-items: flex-start;
+    }
+    & .b-first-screen__inner {
+        padding-top: 0;
+
+        @include lg(){
+            flex-shrink: 1;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    & .b-first-screen__pic {
+        border-radius: var(--radius);
+        position: relative;
+        z-index: 2;
+        max-width: 480px;
+        max-height: 480px;
+        @include xl(){
+            max-width: 400px;
+            max-height: 400px;
+        }
+        
+        @include lg(){
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+        @include sm(){
+            display: none;
+        }
+    }
+}

@@ -8,7 +8,8 @@
             "title": "Уроки английского в Vayner School",
             "subtitle" : "<p>Учим по нтерактивному учебнику с личным преподавателем, где удобно и когда удобно</p>",
             "btn-text" : "Подобрать курс",
-            "link": "learn.html"
+            "link": "learn.html",
+            "btn" : ""
             })
         </div>
     </div>
@@ -24,11 +25,30 @@
                 "title": "Английский вечером",
                 "subtitle" : "<p>Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации.</p> <p>Получите пробное занятие абсолютно бесплатно!</p> ",
                 "btn-text" : "Записаться на пробное занятие",
+                "btn" : ""
                 })
             </div>
             @@include('description-course.html', {
                 path: "./img/details.jpg"
             })
+        </div>
+    </div>
+}
+
+@@if(page == "test") {
+    <div class="b-first-screen b-first-screen_test-page">
+        <div class="b-first-screen__wrapper">
+            <div class="b-first-screen__inner">
+                @@include('title-box.html', {
+                "markActive" : "false",
+                "markText" : "Для взрослых",
+                "title": "Онлайн-тестирование на знание английского",
+                "subtitle" : "<p>Общий курс английского языка, рассчитанный на людей одного уровня подготовки, с элементами постоянной внутригрупповой коммуникации</p> ",
+                "btn-text" : "пройти тест",
+                "btn" : "secondary"
+                })
+            </div>
+            <img class="b-first-screen__pic" src="img/flag.jpg" alt="">
         </div>
     </div>
 }

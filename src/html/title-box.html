@@ -1,4 +1,4 @@
-<div class="b-title-box">
+@@if(btn == ''){<div class="b-title-box">
     @@if (markActive == "true") {
     <div class="b-mark b-title-box__mark">
         @@markText
@@ -13,4 +13,23 @@
     <a class="b-title-box__btn b-btn b-btn_primary b-btn_xl b-btn_arrow " href="@@link">
         @@btn-text
     </a>
-</div>
+</div>}
+
+@@if(btn == "secondary") {
+    <div class="b-title-box">
+        @@if (markActive == "true") {
+        <div class="b-mark b-title-box__mark">
+            @@markText
+        </div>
+        }
+        <h1 class="b-title-box__title b-title b-title_xl">
+            @@title
+        </h1>
+        <div class="b-title-box__subtitle">
+            @@subtitle
+        </div>
+        <a class="b-title-box__btn b-btn b-btn_secondary b-btn_xl b-btn_arrow " href="@@link">
+            @@btn-text
+        </a>
+    </div>
+}
