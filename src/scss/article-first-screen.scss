@@ -28,11 +28,20 @@
 
 .b-article-first-screen__img {
     border-radius: var(--radius);
+    margin-bottom: -80px;
+
+    @include lg(){
+        margin-bottom: 0;
+    }
 }
 .b-section-background_article {
-    bottom: 22%;
+    bottom: 0;
     padding-left: 25px;
     padding-right: 25px;
+
+    @include lg(){
+        bottom: 10%;
+    }
 }
 
 @media(max-width: 1070px){
@@ -43,7 +52,7 @@
 
 @media(max-width: 870px){
     .b-section-background_article {
-        bottom: 0;
+        bottom: -10%;
     }
     .b-article-first-screen__img {
         border-radius: 20px;
