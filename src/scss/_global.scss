@@ -303,3 +303,13 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+
+.b-blockScroll {
+    overflow: hidden;
+    @media(hover) {
+      padding-right: 17px;
+    }
+  }
+  .b-show {
+    display: flex !important;
+  }

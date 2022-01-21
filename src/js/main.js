@@ -1,9 +1,6 @@
 //disabled link
 document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault()
 
-//lang select
-
-
 //burger
 const burger = document.querySelector('.b-burger')
 const menu = document.querySelector('.b-menu')
@@ -90,6 +87,59 @@ videos.forEach((el) => {
         el.querySelector('button').remove();
     });
 });
+
+//---MODALS---
+//hide all modals
+const modalOpen = document.querySelectorAll('[data-modal-open]')
+const modals = document.querySelectorAll('[data-modal]')
+const moadalInner = document.querySelectorAll('.b-modal')
+const closeModal = document.querySelectorAll('[data-modal-close]')
+function hideModals() {
+    modals.forEach(elem => {
+      elem.classList.remove('b-show');
+    });
+  };
+  
+  //find & open current modal, close rest & block scroll
+  modalOpen.forEach(elem => {
+    elem.addEventListener('click', event => {
+      event.preventDefault()
+      let target = event.currentTarget.getAttribute('data-modal-open');
+      hideModals()
+      document.body.classList.add('b-blockScroll')
+      let targetModal = document.querySelector(`[data-modal="${target}"]`);
+      targetModal.classList.add('b-show');
+      let currentVideo = document.querySelector('video')
+      if (targetModal.contains(currentVideo)) {
+        currentVideo.play()
+        currentVideo.setAttribute('data-play', '')
+      }
+    });
+  });
+  
+  //close btn active 
+  closeModal.forEach(el => el.onclick = () => {
+    hideModals();
+    document.body.classList.remove('b-blockScroll');
+  });
+  
+  //close to click overlay 
+  window.addEventListener('click', function (e) {
+    modals.forEach(el => {
+      if (el == e.target && e.target != moadalInner) {
+        document.body.classList.remove('b-blockScroll')
+        hideModals();
+        closeVideo();
+      };
+    });
+  });
+
+  function closeVideo() {
+    currentPlayVideo.forEach(el => {
+      el.pause();
+      el.currentTime = 0;
+    })
+  }
 
 //sliders
 const swiper = new Swiper(".mySwiper", {

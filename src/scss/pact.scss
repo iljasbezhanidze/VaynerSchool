@@ -1,0 +1,117 @@
+.b-modal.b-modal-overlay__pact {
+  padding: 120px 30px;
+  flex-grow: 2;
+  min-width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.b-modal-overlay__pact-content {
+  max-width: calc(1440px + 60px);
+  margin: auto;
+}
+
+.b-pact {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 120px;
+}
+
+.b-pact__nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.b-pact__left-col {
+  flex: 1 0 30%;
+}
+
+.b-pact__right-col {
+  overflow-y: auto !important;
+  max-height: 840px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.b-pact__body {
+  position: relative;
+  max-height: 83vh;
+  overflow-y: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+  }
+}
+
+.b-modal__close-btn {}
+
+
+.b-pact__title {
+  font-size: 28px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.b-pact__btn {}
+
+.b-pact__btn-description {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.b-pact__btn-description:not(first-child) {
+  margin-left: 20px;
+}
+
+.b-pact__btn-description:not(kast-child) {
+  margin-right: 40px;
+}
+
+
+.b-pact__text {
+  margin-bottom: 80px;
+  line-height: 1.6;
+
+  & h2 {
+    font-size: 24px;
+  }
+
+  & p,
+  & li {
+    font-size: 18px;
+  }
+
+  & ul {
+    margin-bottom: 20px;
+  }
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & h1 {
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+}
+
+@media(max-width:900px) {
+  .b-pact {
+    flex-direction: column;
+  }
+
+  .b-pact__left-col {
+    flex: none;
+  }
+}
