@@ -1,0 +1,40 @@
+@@include('html/_head.html', {
+	"title": "Vayner School"
+})
+@@include('html/_components.html')
+<body>
+	<main class="b-page">
+		<div class="b-page__header">
+			<div class="b-page__container">
+				@@include('html/header.html')
+			</div>
+		</div>
+		<div class="b-main b-page__content">
+			<section class="b-main__section">
+				<div class=" b-main__container b-main__container_sm">
+					<div class="b-test">
+						<div class="b-test__header">
+							@@include('html/test-header.html', {
+								"title" : "Результат тестирования",
+								"text" : "<p>Вы ответили на 0 вопросов из 10. Но не беспокойтесь — вы на правильном пути.</p><p>Мы поможем вам освоить язык!</p>"
+							})
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- <div class="b-main b-page__content">
+			<section class="b-main__section">
+				<div class=" b-main__container">
+				</div>
+			</section>
+		</div> -->
+		<div class="b-page-footer">
+			<div class="b-page-footer__container">
+				@@include('html/footer.html')
+			</div>
+		</div>
+	</main>
+	@@include('html/_scripts.html')
+</body>
+</html>

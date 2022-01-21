@@ -12,6 +12,12 @@
         }
     }
 
+    & .b-first-screen__wrapper {
+        @include md(){
+            align-items: center;
+        }
+    }
+
     & .b-first-screen__pic {
         border-radius: var(--radius);
         position: relative;

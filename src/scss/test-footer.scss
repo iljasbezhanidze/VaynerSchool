@@ -1,0 +1,64 @@
+.b-test__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: get-vw(80px);
+
+    @include xs() {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+.b-test-progress {
+    width: 100%;
+}
+
+.b-test-progress__stats {
+    margin-bottom: 10px;
+    margin-left: 34px;
+}
+
+.b-test-progress__current-vale {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    margin-right: 10px;
+}
+
+.b-test-progress__page-counter {
+    line-height: 22px;
+    font-weight: 500;
+    opacity: .4;
+    font-size: 12px;
+}
+
+.b-test-progress__bar {
+    height: 2px;
+    width: 100%;
+    background-color: #EEEEEE;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.b-test-progress__filling {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--accent-color);
+    //WIDTH STYLED INLINE
+}
+
+.b-test__btn {
+    max-width: 230px;
+    margin-top: 40px;
+}
+
+.b-btn {}
+
+.b-btn_arrow {}
+
+.b-btn_primary {}
+
+.b-btn_xl {}

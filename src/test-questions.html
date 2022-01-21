@@ -1,0 +1,60 @@
+@@include('html/_head.html', {
+	"title": "Vayner School"
+})
+@@include('html/_components.html')
+<body>
+	<main class="b-page">
+		<div class="b-page__header">
+			<div class="b-page__container">
+				@@include('html/header.html')
+			</div>
+		</div>
+		<div class="b-main b-page__content">
+			<section class="b-main__section">
+				<div class="b-main__container b-main__container_sm">
+					<div class="b-test">
+						<div class="b-test__header">
+							@@include('html/test-header.html', {
+								"title" : "Заполните пропуски и ответьте на вопрос по тексту",
+							})
+						</div>
+						<div class="b-test-content b-test__body">
+							<p class="b-test-content__question">If you match these criteria, contact your manager because you qualify for a salary (1)_____ :</p>
+							<ul class="b-test-content__note-list">
+								<li class="b-test-content__note">achieved your quarter goal;</li>
+								<li class="b-test-content__note">fulfilled personal development plan.</li>
+							</ul>
+							<div class="b-test-content__label">Варианты ответа:</div>
+							<div class="b-test-content__variable-wrapper">
+								<input type="radio" class="b-test-content__variable" id="answer1" name="var" checked>
+								<label class="b-test-content__name" for="answer1">Upgrade</label>
+							</div>
+							<div class="b-test-content__variable-wrapper">
+								<input type="radio" class="b-test-content__variable" id="answer2" name="var">
+								<label class="b-test-content__name" for="answer2">Grows</label>
+							</div>
+							<div class="b-test-content__variable-wrapper">
+								<input type="radio" class="b-test-content__variable" id="answer3" name="var">
+								<label class="b-test-content__name" for="answer3">Raise</label>
+							</div>
+						</div>
+						@@include('html/test-footer.html')
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- <div class="b-main b-page__content">
+			<section class="b-main__section">
+				<div class=" b-main__container">
+				</div>
+			</section>
+		</div> -->
+		<div class="b-page-footer">
+			<div class="b-page-footer__container">
+				@@include('html/footer.html')
+			</div>
+		</div>
+	</main>
+	@@include('html/_scripts.html')
+</body>
+</html>

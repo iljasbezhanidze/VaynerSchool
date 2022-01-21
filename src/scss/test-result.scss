@@ -1,0 +1,16 @@
+.b-test {
+}
+.b-test__header {
+}
+
+
+.b-test-header__text-result {
+    line-height: 1.6;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 40px;
+
+    @include xs(){
+    font-size: 18px;
+    }
+}
