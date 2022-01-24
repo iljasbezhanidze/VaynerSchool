@@ -15,39 +15,41 @@
 					<div class="b-test" id="app">
 						<div class="b-test__wrapper" v-for="(question, index) in quiz.questions">
 							<!-- HEADER -->
-							<div class="b-test__header">
-								<div class="b-test-header__description-page">
-									Онлайн-тестирование на знание английского
-								</div>
-								<h1 class="b-test-header__title b-title b-title_xl">{{question.condition}}</h1>
-							</div>
-							<!-- BODY -->
-							<div class="b-test-content b-test__body">
-								<p class="b-test-content__question">If you match these criteria, contact your manager because you qualify for a salary (1)_____ :</p>
-								<ul class="b-test-content__note-list">
-									<li class="b-test-content__note">achieved your quarter goal;</li>
-									<li class="b-test-content__note">fulfilled personal development plan.</li>
-								</ul>
-								<div class="b-test-content__label">Варианты ответа:</div>
-								<ul>
-									<li class="b-test-content__variable-wrapper" v-for="(response, index) in question.responses">
-										<input type="radio" class="b-test-content__variable" :id="'answer' + index" name="var" >
-										<label class="b-test-content__name" :for="'answer' + index">{{response.text}}</label>
-									</li>
-								</ul>
-							</div>
-							<!-- FOOTER -->
-							<div class="b-test__footer">
-								<div class="b-test-progress">
-									<div class="b-test-progress__stats">
-										<span class="b-test-progress__current-vale">10%</span>
-										<span class="b-test-progress__page-counter">1/10</span>
+							<div class="b-test__current-question" v-show="index === questionIndex">
+								<div class="b-test__header">
+									<div class="b-test-header__description-page">
+										Онлайн-тестирование на знание английского
 									</div>
-									<div class="b-test-progress__bar">
-										<div class="b-test-progress__filling" style="width: 10%;"></div>
-									</div>
+									<h1 class="b-test-header__title b-title b-title_xl">{{question.condition}}</h1>
 								</div>
-								<button class="b-test__btn b-btn b-btn_arrow b-btn_primary b-btn_xl" type="button" v-on:click="next">Далее</button>
+								<!-- BODY -->
+								<div class="b-test-content b-test__body">
+									<p class="b-test-content__question">If you match these criteria, contact your manager because you qualify for a salary (1)_____ :</p>
+									<ul class="b-test-content__note-list">
+										<li class="b-test-content__note">achieved your quarter goal;</li>
+										<li class="b-test-content__note">fulfilled personal development plan.</li>
+									</ul>
+									<div class="b-test-content__label">Варианты ответа:</div>
+									<ul>
+										<li class="b-test-content__variable-wrapper" v-for="(response, index) in question.responses">
+											<input type="radio" class="b-test-content__variable" :id="'answer' + index" name="var" >
+											<label class="b-test-content__name" :for="'answer' + index">{{response.text}}</label>
+										</li>
+									</ul>
+								</div>
+								<!-- FOOTER -->
+								<div class="b-test__footer">
+									<div class="b-test-progress">
+										<div class="b-test-progress__stats">
+											<span class="b-test-progress__current-vale">{{100 / quiz.questions.length * questionIndex + '%'}}</span>
+											<span class="b-test-progress__page-counter">{{questionIndex + 1 + '/' + quiz.questions.length}}</span>
+										</div>
+										<div class="b-test-progress__bar">
+											<div class="b-test-progress__filling" style="width:10%"></div>
+										</div>
+									</div>
+									<button class="b-test__btn b-btn b-btn_arrow b-btn_primary b-btn_xl" type="button" v-on:click="nextQuestion">Далее</button>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -22,7 +22,8 @@ const quiz = {
                     text: 'answer 1',
                 },
                 {
-                    text: 'answer 2', correct: true,
+                    text: 'answer 2',
+                    correct: true,
                 },
                 {
                     text: 'answer 3'
@@ -39,7 +40,8 @@ const quiz = {
                     text: 'answer 2'
                 },
                 {
-                    text: 'Raise 3', correct: true,
+                    text: 'Raise 3',
+                    correct: true,
                 },
             ]
         },
@@ -68,8 +70,15 @@ const test = new Vue({
         questionIndex: 0,
     },
     methods: {
-        next: function() {
+        nextQuestion: function () {
+            this.next()
+            this.progress()
+        },
+        next: function () {
             this.questionIndex++
+        },
+        progress: function () {
+            console.log(100 / this.quiz.questions.length)
         }
     },
 })
