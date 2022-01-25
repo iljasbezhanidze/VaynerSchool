@@ -1,17 +1,9 @@
-.b-article-content__parth {
-    margin-bottom: 80px;
-
-    @include md() {
-        margin-bottom: 60px;
-    }
-
-    @include xs() {
-        margin-bottom: 40px;
-    }
+.b-article-content {
 
     & table {
         border-collapse: collapse;
         width: 100%;
+        margin-top: 80px;
 
         & thead {
             font-size: 14px;
@@ -48,6 +40,17 @@
 }
 
 .b-article-content {
+    &>*:not(:last-child, h1, h2, h3, h4, h5, h6, p) {
+        margin-bottom: 80px !important;
+
+        @include md() {
+            margin-bottom: 60px !important;
+        }
+
+        @include xs() {
+            margin-bottom: 40px !important;
+        }
+    }
 
     img,
     iframe,
@@ -135,6 +138,7 @@
         width: 150px;
         height: 150px;
     }
+
     @include xs() {
         width: 100px;
         height: 100px;

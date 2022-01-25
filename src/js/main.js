@@ -88,9 +88,11 @@ const test = new Vue({
         Осталось подтянуть совсем немного и вы освоите язык!`
     },
     methods: {
+        handleRadio(value) {
+            this.userResponses[this.questionIndex] = value ? value : false
+        },
         next: function () {
             this.questionIndex++
-            console.log(this.userResponses)
         },
         score: function () {
             return this.userResponses.filter(function (val) {

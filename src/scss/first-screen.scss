@@ -12,7 +12,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 83vw;
+    width: 84vw;
     bottom: 0;
     background-position: right;
     background-size: cover;
@@ -23,6 +23,14 @@
     @media(max-width: 1200px) {
         width: 100vw;
         border-top-right-radius: 0;
+    }
+
+    @media(max-width: 1840px) {
+        width: 86vw;
+    }
+
+    @media(max-width: 1710px) {
+        width: 89vw;
     }
 }
 
@@ -95,8 +103,7 @@
             margin-bottom: 20px;
         }
 
-        & .b-details {
-        }
+        & .b-details {}
 
         & .b-details__position {
             // display: flex;
@@ -110,7 +117,7 @@
 }
 
 .b-first-screen_singl-page .b-details__illustration {
-    @media(max-width: 380px){
+    @media(max-width: 380px) {
         display: none;
     }
 }

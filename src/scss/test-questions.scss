@@ -98,17 +98,21 @@
     }
 }
 
-// .b-test {
-//     min-height: 100vh;
-// }
-
-// .b-test__wrapper {
-//     height: 100%;
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// .b-test__footer {
+@include mob() {
+    .b-test-content__name:before {
+        width: 20px;
+        height: 20px;
+        left: -30px;
+    }
     
-//     margin-top: auto;
-// }
+    .b-test-content__name:after {
+        top: 2px;
+        width: 16px;
+        height: 16px;
+        left: -28px;
+    }
+    .b-test-content__name {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+}
