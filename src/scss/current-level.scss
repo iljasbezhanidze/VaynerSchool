@@ -49,7 +49,7 @@
     }
 }
 
-@include xs() {
+@include sm() {
     .b-level-card {
         border: 0;
         border-bottom-left-radius: 0;

@@ -16,12 +16,15 @@
 }
 
 .b-first-screen__inner {
-    max-width: 660px;
     padding-top: get-vw(146px);
     padding-bottom: get-vw(146px);
     padding-left: 25px;
     padding-right: 25px;
     flex-shrink: 0;
+    &:not(.b-first-screen__inner_full-width) {
+        max-width: 660px;
+
+    }
 
     @media(min-width: 1920px) {
         max-width: 50%;

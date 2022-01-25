@@ -67,11 +67,6 @@ body {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-
-    @include mob() {
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
 }
 
 .b-main__container {
@@ -138,6 +133,10 @@ body {
     position: absolute;
     object-fit: cover;
     height: 100%;
+
+    @include md(){
+        opacity: .8;
+    }
 }
 
 .b-page-footer {
@@ -289,8 +288,8 @@ body {
         color: #000;
         font-weight: 600;
         line-height: 1.2;
-        padding-bottom: 11px;
-        padding-top: 13px;
+        padding-bottom: 10px;
+        padding-top: 10px;
         font-size: 18px;
     }
 }

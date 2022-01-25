@@ -11,9 +11,10 @@
 
 .b-about-description__strong-text {
     max-width: 760px;
-    @include adaptive-font(36, 24);
+    @include adaptive-font(36, 20);
     font-weight: 600;
     line-height: 1.4;
+    
 
     @include md(){
         margin-bottom: 40px;

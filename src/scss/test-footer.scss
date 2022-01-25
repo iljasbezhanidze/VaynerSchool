@@ -48,6 +48,7 @@
     height: 100%;
     background-color: var(--accent-color);
     //WIDTH STYLED INLINE
+    transition: width .3s;
 }
 
 .b-test__btn {

@@ -59,7 +59,7 @@
     max-height: 80px;
 
     &::placeholder {
-        opacity: .6;
+        color: rgba(#141B1F, 0.6);
     }
 
     &:focus {
@@ -93,7 +93,7 @@
     font-weight: 500;
 
     &::placeholder {
-        opacity: .6;
+        color: rgba(#141B1F, 0.6);
     }
 
     &:focus {

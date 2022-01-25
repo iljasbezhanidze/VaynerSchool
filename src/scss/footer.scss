@@ -105,7 +105,10 @@
 .b-footer__col_address {
     max-width: 400px;
 }
+.b-socials__link {
+    border: 4px solid var(--accent-color);
 
+}
 .b-socials__link_facebook {
     width: 60px;
     height: 60px;
@@ -115,7 +118,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid var(--accent-color);
 }
 
 .b-socials__link_instagram {
@@ -127,7 +129,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid var(--accent-color);
 }
 
 .b-socials__list-item {

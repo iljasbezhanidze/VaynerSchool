@@ -59,6 +59,21 @@ const quiz = {
                     text: 'answer 3'
                 },
             ]
+        },
+        {
+            condition: 'Condition 5',
+            text: "Question 5",
+            responses: [{
+                    text: 'answer 15',
+                    correct: true,
+                },
+                {
+                    text: 'answer 42'
+                },
+                {
+                    text: 'answer 38'
+                },
+            ]
         }
     ],
 }
@@ -68,20 +83,27 @@ const test = new Vue({
     data: {
         quiz: quiz,
         questionIndex: 0,
+        userResponses: Array(quiz.questions.length).fill(false),
+        text: `А это значит, что вам есть куда стремится.
+        Осталось подтянуть совсем немного и вы освоите язык!`
     },
     methods: {
-        nextQuestion: function () {
-            this.next()
-            this.progress()
-        },
         next: function () {
             this.questionIndex++
+            console.log(this.userResponses)
         },
-        progress: function () {
-            console.log(100 / this.quiz.questions.length)
+        score: function () {
+            return this.userResponses.filter(function (val) {
+                return val
+            }).length;
         }
     },
 })
+
+
+
+
+
 
 //disabled link
 document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault()

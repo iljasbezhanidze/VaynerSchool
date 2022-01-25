@@ -1,7 +1,8 @@
 @@include('html/_head.html', {
-	"title": "Vayner School"
+"title": "Vayner School"
 })
 @@include('html/_components.html')
+
 <body>
 	<main class="b-page">
 		<div class="b-page__header">
@@ -24,16 +25,22 @@
 								</div>
 								<!-- BODY -->
 								<div class="b-test-content b-test__body">
-									<p class="b-test-content__question">If you match these criteria, contact your manager because you qualify for a salary (1)_____ :</p>
+									<p class="b-test-content__question">{{question.text}}</p>
 									<ul class="b-test-content__note-list">
 										<li class="b-test-content__note">achieved your quarter goal;</li>
 										<li class="b-test-content__note">fulfilled personal development plan.</li>
 									</ul>
 									<div class="b-test-content__label">Варианты ответа:</div>
 									<ul>
-										<li class="b-test-content__variable-wrapper" v-for="(response, index) in question.responses">
-											<input type="radio" class="b-test-content__variable" :id="'answer' + index" name="var" >
-											<label class="b-test-content__name" :for="'answer' + index">{{response.text}}</label>
+										<li class="b-test-content__variable-wrapper"
+											v-for="(response, index) in question.responses">
+											<input type="radio" class="b-test-content__variable"
+												v-bind:id="'answer' + index"
+												v-bind:value="response.correct"
+												v-bind:name="'var' + questionIndex"
+												v-model="userResponses[index]">
+											<label class="b-test-content__name"
+												:for="'answer' + index">{{response.text}}</label>
 										</li>
 									</ul>
 								</div>
@@ -41,14 +48,56 @@
 								<div class="b-test__footer">
 									<div class="b-test-progress">
 										<div class="b-test-progress__stats">
-											<span class="b-test-progress__current-vale">{{100 / quiz.questions.length * questionIndex + '%'}}</span>
-											<span class="b-test-progress__page-counter">{{questionIndex + 1 + '/' + quiz.questions.length}}</span>
+											<span
+												class="b-test-progress__current-vale">{{100 / quiz.questions.length * questionIndex + '%'}}</span>
+											<span
+												class="b-test-progress__page-counter">{{questionIndex + 1 + '/' + quiz.questions.length}}</span>
 										</div>
 										<div class="b-test-progress__bar">
-											<div class="b-test-progress__filling" style="width:10%"></div>
+											<div class="b-test-progress__filling"
+												v-bind:style="{width: 100 / quiz.questions.length * questionIndex + '%'}">
+											</div>
 										</div>
 									</div>
-									<button class="b-test__btn b-btn b-btn_arrow b-btn_primary b-btn_xl" type="button" v-on:click="nextQuestion">Далее</button>
+									<button class="b-test__btn b-btn b-btn_arrow b-btn_primary b-btn_xl" type="button"
+										v-on:click="next">Далее</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- RESULT -->
+						<div class="b-test__wrapper-result"  v-show="questionIndex === quiz.questions.length">
+							<div class="b-test__header b-test__header_resut">
+								@@include('html/test-header.html', {
+								"title" : "Результат тестирования",
+								})
+								<div class="b-test__wrapper" id="app-result">
+									<div class="b-test-header__text-result">
+										Вы ответили на {{score()}} вопроса из {{quiz.questions.length}}. {{text}}
+									</div>
+								</div>
+							</div>
+							<div class="b-test-result b-test__result-content">
+								<div class="b-test-result__col">
+									<p class="b-test-result__message">
+										Оставьте ваши контакты и мы отправим результат теста с расшифровкой
+										вам на почту. Обещаем не спамить :)
+									</p>
+								</div>
+								<div class="b-test-result__col">
+									<form class="b-test-form b-test-result__form">
+										<input class="b-test-form__input" type="text" placeholder="Имя*">
+										<input class="b-test-form__input" type="text" placeholder="E-mail*">
+										<input class="b-test-form__input" type="number" placeholder="Номер телефона*">
+										<button
+											class="b-test-form__btn b-btn b-btn_xl b-btn_arrow b-btn_secondary">Отправить</button>
+									</form>
+									<div class="b-form b-test-result__agr">
+										<a href="#" class="b-form__agr" data-modal-open="personal date">Нажимая на кнопку
+											“Отправить”, я соглашаюсь на
+											<span class="b-form__agr-link">обработку персональнных данных.</span>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -70,4 +119,5 @@
 	</main>
 	@@include('html/_scripts.html')
 </body>
+
 </html>

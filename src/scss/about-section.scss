@@ -26,6 +26,12 @@
 
 .b-about-section__text-col {
     max-width: 640px;
+
+    @include lg(){
+        max-width: 550px;
+        z-index: 3;
+        position: relative;
+    }
 }
 
 .b-about-section__title {

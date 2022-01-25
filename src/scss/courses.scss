@@ -40,6 +40,7 @@
     display: block;
     width: max-content;
     margin-top: 80px;
+    border-radius: 50px;
 
     @include sm(){
         margin-top: 60px;

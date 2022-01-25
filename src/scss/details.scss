@@ -137,7 +137,11 @@
     }
     .b-first-screen_singl-page .b-first-screen__inner {
         @media(max-width: 1200px) {
-            padding-bottom: 19vw;
+            padding-bottom: 100px;
+        }
+
+        @include xs(){
+            padding-bottom: 60px;
         }
     }
 }

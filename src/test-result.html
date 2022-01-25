@@ -18,16 +18,17 @@
 							@@include('html/test-header.html', {
 							"title" : "Результат тестирования",
 							})
-							<p class="b-test-header__text-result">
-								Вы ответили на 4 вопроса из 10. А это значит, что вам есть куда стремится.
-								Осталось подтянуть совсем немного и вы освоите язык!
-							</p>
+							<div class="b-test__wrapper" id="app-result">
+								<div class="b-test-header__text-result">
+									Вы ответили на {{correctly}} вопроса из {{total}}. {{text}}
+								</div>
+							</div>
 						</div>
 						<div class="b-test-result b-test__result-content">
 							<div class="b-test-result__col">
 								<p class="b-test-result__message">
-									Оставьте ваши контакты и мы отправим результат теста с расшифровкой
-									вам на почту. Обещаем не спамить :)
+									Оставьте ваши контакты и мы отправим результат теста с расшифровкой
+									вам на почту. Обещаем не спамить :)
 								</p>
 							</div>
 							<div class="b-test-result__col">
