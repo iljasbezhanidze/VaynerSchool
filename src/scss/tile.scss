@@ -17,8 +17,7 @@
     @include xs(){
         padding: 20px;
     }
-<<<<<<< main
-=======
+
     @media(min-width: 1920px) {
         padding: 80px;
     }
@@ -28,7 +27,6 @@
         padding-top: 30px;
         padding-bottom: 30px;
     }
->>>>>>> local
 }
 
 .b-tile__col {}
