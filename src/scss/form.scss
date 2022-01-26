@@ -76,6 +76,10 @@
     @include mob(){
         padding: 15px 25px;
     }
+
+    @media(max-width: 620px){
+        min-width: 100%;
+    }
 }
 
 .b-form__tetfield {
@@ -105,6 +109,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 20px;
 
     @media(max-width: 620px){
         flex-direction: column;

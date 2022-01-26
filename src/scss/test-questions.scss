@@ -52,6 +52,11 @@
     position: relative;
     cursor: pointer;
 
+    @include mob() {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -62,6 +67,12 @@
         border-radius: 50%;
         border: 2px solid #141B1F;
         opacity: .6;
+
+        @include mob() {
+            width: 20px;
+            height: 20px;
+            left: -28px;
+        }
     }
 
     &:after {
@@ -74,9 +85,14 @@
         left: -43px;
         top: 5px;
         display: none;
+
+        @include mob() {
+            height: 16px;
+            width: 16px;
+            left: -26px;
+            top: 2px;
+        }
     }
-
-
 }
 
 .b-test-content__label {
@@ -109,6 +125,6 @@
 // }
 
 // .b-test__footer {
-    
+
 //     margin-top: auto;
 // }

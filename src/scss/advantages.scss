@@ -27,6 +27,8 @@
     display: flex;
     justify-content: space-between;
     column-gap: 40px;
+    flex-wrap: wrap;
+    row-gap: 40px;
 
     @include child-counter('> li', '• 0', '\a') {
         color: #fff;
@@ -96,8 +98,9 @@
         width: 100vw;
         padding-right: 25px;
         padding-left: 25px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-radius: 0;
     }
 }
 

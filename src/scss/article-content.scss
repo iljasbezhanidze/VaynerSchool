@@ -1,17 +1,29 @@
-.b-article-content__parth {
-    margin-bottom: 80px;
+.b-article-content {
+    &>*:not(h1, h2, h3, h4, h5, h6) {
+        margin-bottom: 80px;
 
-    @include md() {
-        margin-bottom: 60px;
+        @include md() {
+            margin-bottom: 60px;
+        }
+
+        @include xs() {
+            margin-bottom: 40px;
+        }
     }
 
-    @include xs() {
-        margin-bottom: 40px;
-    }
+
 
     & table {
         border-collapse: collapse;
         width: 100%;
+        margin-top: 80px;
+        @include md() {
+            margin-top: 60px;
+        }
+
+        @include xs() {
+            margin-top: 40px;
+        }
 
         & thead {
             font-size: 14px;
@@ -135,6 +147,7 @@
         width: 150px;
         height: 150px;
     }
+
     @include xs() {
         width: 100px;
         height: 100px;

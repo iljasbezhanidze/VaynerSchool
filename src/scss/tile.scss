@@ -16,7 +16,16 @@
     }
 
     @include xs(){
-        padding: 20px;
+        padding: 25px;
+    }
+
+    @media(max-width: 360px){
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    @media(min-width: 1920px){
+        padding: 80px;
     }
 }
 
@@ -60,6 +69,9 @@
     border-radius: var(--radius);
     margin-bottom: 34px;
     aspect-ratio: 1/1;
+    @media(max-width: 360px){
+        display: none;
+    }
 }
 
 .b-tile__group,
@@ -71,4 +83,7 @@
 
 .b-tile__working {
     margin-bottom: 5px;
+    @media(max-width: 360px){
+        margin-bottom: 0;
+    }
 }

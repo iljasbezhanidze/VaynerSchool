@@ -12,7 +12,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 83vw;
+    width: 85vw;
     bottom: 0;
     background-position: right;
     background-size: cover;
@@ -23,6 +23,13 @@
     @media(max-width: 1200px) {
         width: 100vw;
         border-top-right-radius: 0;
+    }
+
+    @media(max-width: 1800px){
+        width: 87vw;
+    }
+    @media(max-width: 1700px){
+        width: 90vw;
     }
 }
 
