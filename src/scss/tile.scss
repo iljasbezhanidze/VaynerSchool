@@ -17,6 +17,18 @@
     @include xs(){
         padding: 20px;
     }
+<<<<<<< main
+=======
+    @media(min-width: 1920px) {
+        padding: 80px;
+    }
+
+    @media(max-width: 360px){
+        padding: 25px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+>>>>>>> local
 }
 
 .b-tile__col {}
@@ -59,6 +71,10 @@
     border-radius: var(--radius);
     margin-bottom: 34px;
     aspect-ratio: 1/1;
+
+    @media(max-width: 360px){
+        display: none;
+    }
 }
 
 .b-tile__group,
@@ -66,6 +82,10 @@
     font-size: 16px;
     font-weight: 500;
     transition: all .4s;
+
+    @media(max-width: 360px){
+        margin-bottom: 0;
+    }
 }
 
 .b-tile__working {

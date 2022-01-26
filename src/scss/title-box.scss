@@ -22,15 +22,21 @@
     padding-left: 25px;
     padding-right: 25px;
     flex-shrink: 0;
+<<<<<<< main
 
     @media(min-width: 1920px) {
         max-width: 50%;
+=======
+    max-width: 660px;
+    
+        @media(max-width: 780px) {
+            max-width: 100%;
+        }
     }
-
-    @media(max-width: 660px) {
-        max-width: 100%;
+    .b-first-screen__inner_full-width {
+        max-width: 800px;
+>>>>>>> local
     }
-}
 
 .b-title-box__title {
     margin-bottom: 40px;

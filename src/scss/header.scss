@@ -165,7 +165,7 @@
 }
 
 //adaptive
-@include md() {
+@media(max-width: 1000px) {
     .b-header {
         flex-direction: column;
         min-width: 100%;

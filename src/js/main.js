@@ -1,3 +1,113 @@
+<<<<<<< main
+=======
+//quiz
+const quiz = {
+    questions: [{
+            condition: 'Заполните пропуски и ответьте на вопрос по тексту',
+            text: "If you match these criteria, contact your manager because you qualify for a salary (1)_____ :",
+            responses: [{
+                    text: 'Upgrade',
+                    correct: true,
+                },
+                {
+                    text: 'Grows'
+                },
+                {
+                    text: 'Raise'
+                },
+            ]
+        },
+        {
+            condition: 'Condition 2',
+            text: "Question 2",
+            responses: [{
+                    text: 'answer 1',
+                },
+                {
+                    text: 'answer 2',
+                    correct: true,
+                },
+                {
+                    text: 'answer 3'
+                },
+            ]
+        },
+        {
+            condition: 'Condition 3',
+            text: "Question 3",
+            responses: [{
+                    text: 'answer 1',
+                },
+                {
+                    text: 'answer 2'
+                },
+                {
+                    text: 'Raise 3',
+                    correct: true,
+                },
+            ]
+        },
+        {
+            condition: 'Condition 4',
+            text: "Question 4",
+            responses: [{
+                    text: 'answer 1',
+                    correct: true,
+                },
+                {
+                    text: 'answer 2'
+                },
+                {
+                    text: 'answer 3'
+                },
+            ]
+        },
+        {
+            condition: 'Condition 5',
+            text: "Question 5",
+            responses: [{
+                    text: 'answer 15',
+                    correct: true,
+                },
+                {
+                    text: 'answer 42'
+                },
+                {
+                    text: 'answer 38'
+                },
+            ]
+        }
+    ],
+}
+
+const test = new Vue({
+    el: "#app",
+    data: {
+        quiz: quiz,
+        questionIndex: 0,
+        userResponses: Array(quiz.questions.length).fill(false),
+        text: `А это значит, что вам есть куда стремится.
+        Осталось подтянуть совсем немного и вы освоите язык!`
+    },
+    methods: {
+        handleRadio(value) {
+            this.userResponses[this.questionIndex] = value ? value : false
+        },
+        next() {
+            this.questionIndex++
+        },
+        score() {
+            return this.userResponses.filter(val => val).length;
+        }
+    },
+})
+
+
+
+
+
+
+>>>>>>> local
 //disabled link
 document.querySelector('.b-menu__link_disabled').onclick = e => e.preventDefault()
 
@@ -153,10 +263,10 @@ const swiper = new Swiper(".mySwiper", {
         type: 'custom',
         renderCustom: function (swiper, current, total) {
             if (current < 10) {
-                total = '0' + total
+                current = '0' + current
             }
             if (total < 10) {
-                current = '0' + current
+                total = '0' + total
             }
             return current + ' ... ' + (total);
         }
@@ -166,3 +276,28 @@ const swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+// const swiper = new Swiper(".mySwiper", {
+//     spaceBetween: 100,
+//     effect: "fade",
+//     fadeEffect: {
+//         crossFade: true,
+//     },
+//     pagination: {
+//         el: ".swiper-pagination",
+//         type: 'custom',
+//         renderCustom: function (swiper, current, total) {
+//             if (current < 10) {
+//                 total = '0' + total
+//             }
+//             if (total < 10) {
+//                 current = '0' + current
+//             }
+//             return current + ' ... ' + (total);
+//         }
+//     },
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+// });

@@ -24,6 +24,8 @@
     display: flex;
     justify-content: space-between;
     column-gap: 40px;
+    flex-wrap: wrap;
+    row-gap: 40px;
 
     @include child-counter('> li', '• 0', '\a') {
         color: #fff;

@@ -12,7 +12,9 @@
     flex-direction: column;
 }
 
-.b-footer__logo {}
+.b-footer__logo {
+    max-width: 342px;
+}
 
 .b-contacts {
     display: flex;
