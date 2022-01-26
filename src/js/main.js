@@ -1,3 +1,4 @@
+
 //quiz
 const quiz = {
     questions: [{
@@ -91,16 +92,15 @@ const test = new Vue({
         handleRadio(value) {
             this.userResponses[this.questionIndex] = value ? value : false
         },
-        next: function () {
+        next() {
             this.questionIndex++
         },
-        score: function () {
-            return this.userResponses.filter(function (val) {
-                return val
-            }).length;
+        score() {
+            return this.userResponses.filter(val => val).length;
         }
     },
 })
+
 
 
 
@@ -203,53 +203,52 @@ const modalOpen = document.querySelectorAll('[data-modal-open]')
 const modals = document.querySelectorAll('[data-modal]')
 const moadalInner = document.querySelectorAll('.b-modal')
 const closeModal = document.querySelectorAll('[data-modal-close]')
-
 function hideModals() {
     modals.forEach(elem => {
-        elem.classList.remove('b-show');
+      elem.classList.remove('b-show');
     });
-};
-
-//find & open current modal, close rest & block scroll
-modalOpen.forEach(elem => {
+  };
+  
+  //find & open current modal, close rest & block scroll
+  modalOpen.forEach(elem => {
     elem.addEventListener('click', event => {
-        event.preventDefault()
-        let target = event.currentTarget.getAttribute('data-modal-open');
-        hideModals()
-        document.body.classList.add('b-blockScroll')
-        let targetModal = document.querySelector(`[data-modal="${target}"]`);
-        targetModal.classList.add('b-show');
-        let currentVideo = document.querySelector('video')
-        if (targetModal.contains(currentVideo)) {
-            currentVideo.play()
-            currentVideo.setAttribute('data-play', '')
-        }
+      event.preventDefault()
+      let target = event.currentTarget.getAttribute('data-modal-open');
+      hideModals()
+      document.body.classList.add('b-blockScroll')
+      let targetModal = document.querySelector(`[data-modal="${target}"]`);
+      targetModal.classList.add('b-show');
+      let currentVideo = document.querySelector('video')
+      if (targetModal.contains(currentVideo)) {
+        currentVideo.play()
+        currentVideo.setAttribute('data-play', '')
+      }
     });
-});
-
-//close btn active 
-closeModal.forEach(el => el.onclick = () => {
+  });
+  
+  //close btn active 
+  closeModal.forEach(el => el.onclick = () => {
     hideModals();
     document.body.classList.remove('b-blockScroll');
-});
-
-//close to click overlay 
-window.addEventListener('click', function (e) {
+  });
+  
+  //close to click overlay 
+  window.addEventListener('click', function (e) {
     modals.forEach(el => {
-        if (el == e.target && e.target != moadalInner) {
-            document.body.classList.remove('b-blockScroll')
-            hideModals();
-            closeVideo();
-        };
+      if (el == e.target && e.target != moadalInner) {
+        document.body.classList.remove('b-blockScroll')
+        hideModals();
+        closeVideo();
+      };
     });
-});
+  });
 
-function closeVideo() {
+  function closeVideo() {
     currentPlayVideo.forEach(el => {
-        el.pause();
-        el.currentTime = 0;
+      el.pause();
+      el.currentTime = 0;
     })
-}
+  }
 
 //sliders
 const swiper = new Swiper(".mySwiper", {
@@ -263,10 +262,10 @@ const swiper = new Swiper(".mySwiper", {
         type: 'custom',
         renderCustom: function (swiper, current, total) {
             if (current < 10) {
-                total = '0' + total
+                current = '0' + current
             }
             if (total < 10) {
-                current = '0' + current
+                total = '0' + total
             }
             return current + ' ... ' + (total);
         }
@@ -276,3 +275,4 @@ const swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+

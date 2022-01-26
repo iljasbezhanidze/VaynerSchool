@@ -155,9 +155,6 @@
     background-position: center;
     width: 10px;
     height: 10px;
-    margin-left: 16px;
-    position: relative;
-    top: -2px;
 }
 
 .b-header__logo_mob {
@@ -198,13 +195,10 @@
         height: calc(100vh - 114px);
         top: 114px;
 
-        @include xs(){
-            top: 120px;
-            height: calc(100vh - 120px);
-        }
         // justify-content: center;
         @include mob() {
             height: calc(100vh - 97px);
+            ;
             top: 97px;
         }
 

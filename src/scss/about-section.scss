@@ -70,11 +70,6 @@
     right: 0;
     width: get-vw(758px);
     height: get-vw(868px);
-
-    @media(min-width: 1920px) {
-        width: 758px;    
-        height: 868px;    
-    }
 }
 
 @media(max-width: 1026px){
@@ -113,7 +108,7 @@
    }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 460px) {
     .b-about-section__logo {
         margin-bottom: 10px;
     }
@@ -121,6 +116,7 @@
         width: 100vw;
         padding-left: 25px;
         padding-right: 25px;
-        border-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }

@@ -3,25 +3,17 @@
     border-radius: var(--radius);
     padding: get-vw(160px);
 
-    @include xl() {
+    @include xl(){
         padding: get-vw(100px);
     }
 
-    @include xs() {
-        padding: 25px;
+    @include xs(){
+        padding: 20px;
         padding-top: 40px;
         padding-bottom: 40px;
         width: 100vw;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-    }
-
-    @media(max-width: 480px) {
-        border-radius: 0;
-    }
-
-    @media(min-width: 1920px) {
-        padding: 160px;
     }
 }
 
@@ -31,11 +23,10 @@
     line-height: 1.4;
     margin-bottom: 80px;
 
-    @include lg() {
+    @include lg(){
         margin-bottom: 60px;
     }
-
-    @include xs() {
+    @include xs(){
         margin-bottom: 40px;
     }
 }
@@ -45,9 +36,8 @@
     line-height: 1.4;
     font-weight: 600;
     margin-bottom: 40px;
-
-    @include xs() {
-        margin-bottom: 20px;
+    @include xs(){
+    margin-bottom: 20px;
     }
 }
 
@@ -58,23 +48,13 @@
 .b-ticket__price {
     line-height: 1.2;
     font-weight: 700;
-    @include adaptive-font(64, 38);
-
-    @media(min-width: 1920px) {
-        font-size: 64px;
-    }
-
+    @include adaptive-font(64,38);
     margin-bottom: 20px;
 }
-
 .b-ticket__sup {
     margin-left: 20px;
     @include adaptive-font(18, 12);
     font-weight: 500;
-
-    @media(min-width: 1920px) {
-        font-size: 18px;
-    }
 }
 
 .b-ticket__price_current {
@@ -90,7 +70,7 @@
     -webkit-text-decoration-thickness: 2px;
     text-decoration-thickness: 3px;
 
-    &+.b-ticket__sup {
+    & + .b-ticket__sup {
         color: #D0D1D2;
     }
 }
