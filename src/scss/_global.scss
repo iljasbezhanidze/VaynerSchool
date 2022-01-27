@@ -181,6 +181,11 @@ body {
     display: inline-block;
     cursor: pointer;
 
+    @include xs(){
+        display: block;
+        width: 100%;
+    }
+
     &_primary {
         border: 4px solid var(--accent-color);
 

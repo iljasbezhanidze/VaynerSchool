@@ -89,7 +89,12 @@
 
 .b-form {}
 
-.b-form__agr {}
+.b-form__agr {
+    text-align: left;
+    @include xs(){
+        max-width: 100%;
+    }
+}
 
 .b-form__agr-link {}
 
