@@ -1,4 +1,3 @@
-
 //quiz
 const quiz = {
     questions: [{
@@ -203,57 +202,59 @@ const modalOpen = document.querySelectorAll('[data-modal-open]')
 const modals = document.querySelectorAll('[data-modal]')
 const moadalInner = document.querySelectorAll('.b-modal')
 const closeModal = document.querySelectorAll('[data-modal-close]')
+
 function hideModals() {
     modals.forEach(elem => {
-      elem.classList.remove('b-show');
+        elem.classList.remove('b-show');
     });
-  };
-  
-  //find & open current modal, close rest & block scroll
-  modalOpen.forEach(elem => {
+};
+
+//find & open current modal, close rest & block scroll
+modalOpen.forEach(elem => {
     elem.addEventListener('click', event => {
-      event.preventDefault()
-      let target = event.currentTarget.getAttribute('data-modal-open');
-      hideModals()
-      document.body.classList.add('b-blockScroll')
-      let targetModal = document.querySelector(`[data-modal="${target}"]`);
-      targetModal.classList.add('b-show');
-      let currentVideo = document.querySelector('video')
-      if (targetModal.contains(currentVideo)) {
-        currentVideo.play()
-        currentVideo.setAttribute('data-play', '')
-      }
+        event.preventDefault()
+        let target = event.currentTarget.getAttribute('data-modal-open');
+        hideModals()
+        document.body.classList.add('b-blockScroll')
+        let targetModal = document.querySelector(`[data-modal="${target}"]`);
+        targetModal.classList.add('b-show');
+        let currentVideo = document.querySelector('video')
+        if (targetModal.contains(currentVideo)) {
+            currentVideo.play()
+            currentVideo.setAttribute('data-play', '')
+        }
     });
-  });
-  
-  //close btn active 
-  closeModal.forEach(el => el.onclick = () => {
+});
+
+//close btn active 
+closeModal.forEach(el => el.onclick = () => {
     hideModals();
     document.body.classList.remove('b-blockScroll');
-  });
-  
-  //close to click overlay 
-  window.addEventListener('click', function (e) {
-    modals.forEach(el => {
-      if (el == e.target && e.target != moadalInner) {
-        document.body.classList.remove('b-blockScroll')
-        hideModals();
-        closeVideo();
-      };
-    });
-  });
+});
 
-  function closeVideo() {
+//close to click overlay 
+window.addEventListener('click', function (e) {
+    modals.forEach(el => {
+        if (el == e.target && e.target != moadalInner) {
+            document.body.classList.remove('b-blockScroll')
+            hideModals();
+            closeVideo();
+        };
+    });
+});
+
+function closeVideo() {
     currentPlayVideo.forEach(el => {
-      el.pause();
-      el.currentTime = 0;
+        el.pause();
+        el.currentTime = 0;
     })
-  }
+}
 
 //sliders
 const swiper = new Swiper(".mySwiper", {
     spaceBetween: 100,
     effect: "fade",
+    centeredSlides: "true",
     fadeEffect: {
         crossFade: true,
     },
@@ -276,3 +277,25 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
+const slidesText = document.querySelectorAll('.b-slide-section__description')
+for (let i = 0; i < slidesText.length -1; i++) {
+    const nextSlide = document.querySelector('.swiper-button-next');
+    const prevSlide = document.querySelector('.swiper-button-prev');
+    let currentSlide = 0
+
+    const showSlide = () => slidesText[currentSlide].style = "opacity: 1; display: flex;";
+    const hideSlide = () => slidesText[currentSlide].style = "opacity: 0; display: none;";
+    showSlide()
+    
+    
+    nextSlide.addEventListener('click', () => {
+        hideSlide()
+        currentSlide++ 
+        showSlide()
+    })
+    prevSlide.addEventListener('click', () => {
+        hideSlide()
+        currentSlide--
+        showSlide()
+    })
+}

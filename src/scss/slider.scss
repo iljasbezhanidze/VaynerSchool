@@ -268,3 +268,9 @@
         height: 56px;
     }
 }
+
+.b-slide-section__description {
+    transition: all .2s;
+    opacity: 0;
+    display: none;
+}
