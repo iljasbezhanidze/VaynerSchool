@@ -255,6 +255,7 @@ const swiper = new Swiper(".mySwiper", {
     spaceBetween: 100,
     effect: "fade",
     centeredSlides: "true",
+    clickable: "false",
     fadeEffect: {
         crossFade: true,
     },
@@ -281,21 +282,21 @@ const slidesText = document.querySelectorAll('.b-slide-section__description')
 for (let i = 0; i < slidesText.length -1; i++) {
     const nextSlide = document.querySelector('.swiper-button-next');
     const prevSlide = document.querySelector('.swiper-button-prev');
+    const slideSwape = document.querySelectorAll('.swiper-slide');
     let currentSlide = 0
 
     const showSlide = () => slidesText[currentSlide].style = "opacity: 1; display: flex;";
     const hideSlide = () => slidesText[currentSlide].style = "opacity: 0; display: none;";
+    const iterNext = () => currentSlide++ 
+    const iterPrev = () => currentSlide-- 
     showSlide()
     
-    
-    nextSlide.addEventListener('click', () => {
-        hideSlide()
-        currentSlide++ 
-        showSlide()
-    })
-    prevSlide.addEventListener('click', () => {
-        hideSlide()
-        currentSlide--
-        showSlide()
-    })
+    nextSlide.addEventListener('click', () => [hideSlide(), iterNext(), showSlide()])
+    prevSlide.addEventListener('click', () => [hideSlide(), iterPrev(), showSlide()])
+
+    swiper.on('transitionEnd', function () {
+            hideSlide()
+            currentSlide = swiper.realIndex
+            showSlide()
+      });
 }
