@@ -256,6 +256,9 @@ const swiper = new Swiper(".mySwiper", {
     effect: "fade",
     centeredSlides: "true",
     clickable: "false",
+    autoplay: {
+        delay: 5000,
+      },
     fadeEffect: {
         crossFade: true,
     },
