@@ -92,7 +92,12 @@ const test = new Vue({
             this.userResponses[this.questionIndex] = value ? value : false
         },
         next() {
-            this.questionIndex++
+            let inputs = document.querySelectorAll('.b-test-content__variable');
+            inputs.forEach(el => {
+                if(el.matches(':checked')){
+                    this.questionIndex++
+                }
+            })
         },
         score() {
             return this.userResponses.filter(val => val).length;
