@@ -145,6 +145,11 @@
     &:hover:after {
         width: 0;
     }
+    @include sm(){
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .b-form__btn {}

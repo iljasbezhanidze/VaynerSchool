@@ -136,14 +136,14 @@
     }
 
     @include mob() {
-        width: 30px;
-        height: 30px;
+        width: 30px !important;
+        height: 30px !important;
     }
 }
 
 .b-button-toggle {
     border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
+    border-radius: 50px !important;
     position: relative;
 
     &::before {
